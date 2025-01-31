@@ -1,5 +1,5 @@
 ---
-title: Example Guide
+title: Deployment
 description: A guide in my new Starlight docs site.
 ---
 
