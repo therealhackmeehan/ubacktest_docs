@@ -5,9 +5,9 @@ description: Some Optional Options for Ultimate Customizability
 
 ### Advanced Options
 
-IMAGE HERE.
-
 Click the `advanced options` dropdown to reveal 3 additional customization options.
+
+![Advanced Backtest Options](../../../assets/advancedOptions.png)
 
 #### 1. Time @ Which to Trade
 
@@ -16,7 +16,7 @@ Select from `high`, `low`, `open`, or `close` to specify the time you want to ex
 For instance, choosing `open` means your strategy is backtested against the stock's opening prices, simulating a trade just after 9:30 AM. By default, `close` is used.
 
 :::danger
-Avoid using `high` or `low` for backtesting, as these introduce bias. At the time of the test, you wouldn't know the exact high or low for that period.
+Avoid using `high` or `low` for backtesting, as these introduce bias. At the time of the test, you wouldn't know the exact high or low for that period. Also be careful not to accidentally use the `close` price as a factor in deciding the trading signal at `open`.
 :::
 
 #### 2. Trading Cost
@@ -29,5 +29,3 @@ For strategies relying on historical data (e.g., using a 50-day moving average),
 
 > **Example**:  
 > If your strategy uses a 50-day moving average, set the burn-in period to 50 days before your selected start date. This gives the strategy time to develop valid signals before the first trading day.
-
-IMAGE COMPARISON HERE.

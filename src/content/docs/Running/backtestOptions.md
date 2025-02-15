@@ -5,9 +5,9 @@ description: Running and Customizing a Basic Backtest
 
 ### Mandatory Options
 
-IMAGE HERE.
-
 To run a backtest, you must specify 4 mandatory options:
+
+![Simple Backtest Options](../../../assets/backtestOptions.png)
 
 #### 1. Symbol
 

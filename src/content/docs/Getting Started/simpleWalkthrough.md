@@ -69,11 +69,13 @@ For this example, we'll use **AAPL** stock from **Jan 1, 2022, to Mar 1, 2022**.
 
 ### Backtest Results  
 
-If you've followed along, you'll see a chart displaying your portfolio's performance.  
+If you've followed along, you'll see a chart displaying your portfolio's performance. We lost **~2%** of our initial capital.
+
+![An Example Strategy](../../../assets/example.png)
 
 - The **blue line** represents the trading signals over time.  
-- The portfolio starts with **$1** and fluctuates based on the random signals.  
-- As expected, a purely random strategy **loses money** due to transaction costs and lack of an edge.  
+- The portfolio starts with **$1** and fluctuates based on the random signals.
+- Funny enough, we actually outperformed `AAPL`, but let’s be clear—it’s generally not a great idea to trade randomly!
 
 ### Next Steps  
 
@@ -84,5 +86,5 @@ If you've followed along, you'll see a chart displaying your portfolio's perform
 
 ### Can I Actually Make Money?  
 
-Maybe. If you're serious about deploying a profitable strategy, check out our **Deployment Section** to learn how to launch strategies with real capital.  
+If you're serious about deploying a profitable strategy, check out our **Deployment Section** to learn how to launch strategies with real capital.  
 

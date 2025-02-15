@@ -3,26 +3,54 @@ title: Introduction
 description: Your first trading strategy—let's get started!
 ---
 
-## Understanding Trading Signals
+Welcome! We’ll get you started with building your first trading strategy, and don’t worry—it's easier than it sounds!
 
-At its core, your task is simple: **assign a column of buy/sell signals to a table of past stock data.**
+### What Are Trading Signals?
 
-### Trading Signal Basics
+At its core, creating a trading strategy means **deciding when to buy, sell, or do nothing**. We do this by assigning **trading signals** to a table of stock data.
+
+### Trading Signal Basics:
 - **1** → Buy
-- **-1** → Short
+- **-1** → Sell (or Short)
 - **0** → No action
 
-These signals guide the backtesting engine, which applies them to historical data and evaluates the outcome had you traded accordingly.
+These signals will guide the backtesting engine to simulate what would’ve happened if you'd followed those decisions with historical stock data.
 
-### What Does This Look Like?
-Imagine you have stock data structured like this:
+### Here’s What It Looks Like:
+Let’s say you have stock data that looks like this:
 
-<TABLE>
+```
+     high    low     open    close   volume    timestamp
+0    1.0034  0.9863  0.9983  1.0000  65434500  1708007400
+1    1.0054  0.9881  0.9976  0.9916  49701400  1708093800
+2    0.9922  0.9790  0.9887  0.9875  53665600  1708439400
+3    0.9947  0.9826  0.9896  0.9916  41529700  1708525800
+4    1.0060  0.9924  0.9979  1.0028  52292200  1708612200
+...    ...     ...     ...     ...      ...         ...
+```
 
-Your job is to generate a new column of signals. The backtest engine will then simulate trades based on those signals, allowing you to analyze performance, visualize key metrics, and refine your approach.
+Your task is to add a **column of signals** next to the stock data:
 
-### Does This Sound Complicated?
-No worries! We provide all the resources to help you start backtesting confidently. The core principles are straightforward. In fact, a basic **buy-and-hold** strategy takes just three lines of Python code:
+```
+signal
+0
+1
+1
+1
+1
+... 
+1
+0
+0
+1
+1
+```
+
+### What Happens Next?
+The backtesting engine will take these signals and simulate trades, showing you how a strategy would have performed in the past. This gives you the chance to evaluate your approach and refine it to improve your results.
+
+### Does It Sound Hard?
+Not at all! We’re here to make it easy for you. Here's how simple a **buy-and-hold strategy** is in Python:
 
 ```python
 def strategy(data):
@@ -30,5 +58,6 @@ def strategy(data):
     return data
 ```
 
-With this foundation, you're ready to explore and refine your own trading strategies!
+That’s it! You can tweak it further as you learn and grow in building more complex strategies. 
 
+Ready to dive in? Let’s get started!
