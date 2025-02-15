@@ -1,16 +1,18 @@
 ---
-title: Buy-And-Hold Strategy
-description: Just like it sounds.
+title: Buy and Hold Strategy
 ---
 
-As the name suggests, this strategy is the classic long strategy. Buy a stock and hold on to it through a specified date or price point.
+```python
+'''
+Classic Buy & Hold Strategy.
 
-## Code
+Set a buy signal to every date.
+'''
+
+def strategy(data):
+
+    data['signal'] = 1
+    return data
+```
 
 ## Explanation
-
-The
-
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework

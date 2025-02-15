@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Jack Trading',
+			customCss: ['./src/styles/custom.css'],
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
@@ -16,8 +17,11 @@ export default defineConfig({
 					autogenerate: { directory: 'Getting Started' },
 				},
 				{
-					label: 'Tutorial',
-					autogenerate: { directory: 'Tutorial' },
+					label: 'Creating Strategies',
+					autogenerate: { directory: 'Creating' },
+				},
+				{	label: 'Running Strategies',
+					autogenerate: { directory: 'Running'},
 				},
 				{
 					label: 'Deployment',

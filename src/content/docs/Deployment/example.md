@@ -1,6 +1,6 @@
 ---
-title: Deployment
-description: A guide in my new Starlight docs site.
+title: Intro
+description: Getting Started with Strategy Deployment.
 ---
 
 Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.

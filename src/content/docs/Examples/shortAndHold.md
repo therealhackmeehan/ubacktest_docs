@@ -1,18 +1,18 @@
 ---
-title: Short-And-Hold Strategy
-description: Short sell a stock and hold on to it.
+title: Short and Hold
 ---
 
-If you're particularly skeptical of a stock, the short selling strategy is the right move for you. This strategy shorts a stock of your choosing and leaves it be.
+```python
+'''
+Short and Hold Strategy.
 
-## Code
+For every date, assign a shorted position of -1.
+'''
+
+def strategy(data):
+
+    data['signal'] = -1
+    return data
+```
 
 ## Explanation
-
-# Notes
-
-The
-
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
