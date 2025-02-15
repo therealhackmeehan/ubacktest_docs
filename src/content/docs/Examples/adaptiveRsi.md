@@ -2,6 +2,28 @@
 title: RSI Indicator with Adaptive Bounds
 ---
 
+### Explanation & Rationale  
+
+The **Relative Strength Index (RSI)** is a momentum oscillator used to identify overbought and oversold conditions in a stock's price. Traditional RSI strategies use fixed thresholds (e.g., 70 for overbought and 30 for oversold). However, this approach may not adapt well to different market conditions and levels of volatility.  
+
+This strategy enhances the RSI indicator by introducing **adaptive bounds** based on the rolling mean and standard deviation of the RSI over a 50-period window.  
+
+#### **Key Components:**  
+1. **Adaptive RSI Thresholds:**  
+   - Instead of using fixed values (70 and 30), the strategy dynamically adjusts the thresholds based on the stock's recent RSI behavior.  
+   - The upper threshold is calculated as **mean RSI + standard deviation**, making it more sensitive to market conditions.  
+   - The lower threshold is **mean RSI - standard deviation**, allowing for more adaptive entry points.  
+
+2. **Trading Logic:**  
+   - **Buy signal (+1):** Generated when RSI drops below the lower threshold, suggesting the stock is oversold.  
+   - **Sell signal (-1):** Generated when RSI rises above the upper threshold, indicating overbought conditions.  
+   - **Hold (0):** When RSI is within the adaptive range, avoiding unnecessary trades.  
+
+3. **Volatility Adaptation:**  
+   - In highly volatile conditions, standard RSI may give frequent false signals. By incorporating volatility (standard deviation), this strategy adjusts dynamically, preventing premature entries or exits.  
+
+### Code
+
 ```python
 '''
 Buy Low, Sell High with Adaptive RSI Levels.
@@ -45,4 +67,3 @@ def strategy(data):
     return data
 ```
 
-## Explanation

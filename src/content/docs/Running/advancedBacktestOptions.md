@@ -7,31 +7,27 @@ description: Some Optional Options for Ultimate Customizability
 
 IMAGE HERE.
 
-Press the `advanced options` dropdown, and you will see 3 more options.
+Click the `advanced options` dropdown to reveal 3 additional customization options.
 
-#### 1. Time @ Which To Trade
+#### 1. Time @ Which to Trade
 
-You can select `high`, `low`, `open`, or `close`.
+Select from `high`, `low`, `open`, or `close` to specify the time you want to execute trades, corresponding to the data column used in your backtest.
 
-This specifies the time at which you execute your trade, or the column of data that you were to use in the backtest.
-
-For example, if you were to select `open`, you would be backtesting your strategy against the stocks opening prices and simulating as if you were to place the trade just after 9:30:00 AM. `close` is the default.
+For instance, choosing `open` means your strategy is backtested against the stock's opening prices, simulating a trade just after 9:30 AM. By default, `close` is used.
 
 :::danger
-It is advised that you do not use the `high` or `low` columns to run your strategy because that introduces bias. Think about it... at the time of the test, how would you know when you're at the `high` or `low`?
+Avoid using `high` or `low` for backtesting, as these introduce bias. At the time of the test, you wouldn't know the exact high or low for that period.
 :::
 
 #### 2. Trading Cost
 
-Just as you'd expect, this value outlines the cost per trade execution. This trading cost is applied at both **buys** and **sells**. It is calculated as a percentage of the trade's value. 
-
-This trading cost may not seem like a lot, but for strategies that you planned to execute on a frequent basis, it can have disastrous effects!!
+This option defines the cost per trade, applied on both **buys** and **sells**. The cost is calculated as a percentage of the trade value. While it may seem insignificant, for high-frequency strategies, trading costs can significantly impact overall performance.
 
 #### 3. Burn-in Period
 
-For strategies that require a fair amount of previous stock data, in order to calculate a signal at the previous day, you may want to specify an approximate burn in period that gives the strategy plenty of time develop even before the first day of trading.
+For strategies relying on historical data (e.g., using a 50-day moving average), you can define a burn-in period, allowing the strategy to “warm up” before the first trade. This ensures the strategy has enough data to generate signals from the start.
 
-> For example:
-> You are creating a strategy that relies on a 50-day moving average. Instead of waiting until day 50 for your strategy to become valid, specify a burnin date about 50 days prior to that of the start date that you've selected.
+> **Example**:  
+> If your strategy uses a 50-day moving average, set the burn-in period to 50 days before your selected start date. This gives the strategy time to develop valid signals before the first trading day.
 
-Image comparison.
+IMAGE COMPARISON HERE.

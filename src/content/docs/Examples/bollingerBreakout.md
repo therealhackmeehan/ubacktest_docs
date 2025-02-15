@@ -2,6 +2,28 @@
 title: Bollinger Bands Breakout
 ---
 
+### Explanation & Rationale  
+
+The **Bollinger Bands Breakout Strategy** is a trend-following approach that identifies strong momentum by detecting price breakouts beyond Bollinger Bands. Unlike the mean-reversion Bollinger Bands strategy, which assumes price will revert to the average, this breakout strategy assumes that **strong price movements will continue in the breakout direction**.  
+
+#### **Key Components:**  
+1. **Bollinger Bands Calculation:**  
+   - The **middle band** is a **20-period simple moving average (SMA)** of the closing price.  
+   - The **upper band** is calculated as **SMA + (2 × standard deviation)**, representing an overbought threshold.  
+   - The **lower band** is calculated as **SMA - (2 × standard deviation)**, representing an oversold threshold.  
+
+2. **Entry & Exit Conditions:**  
+   - **Buy Signal (+1):** Triggered when the price **breaks above the upper Bollinger Band**, indicating a strong bullish trend.  
+   - **Sell Signal (-1):** Triggered when the price **breaks below the lower Bollinger Band**, suggesting strong bearish momentum.  
+   - No trade is taken when the price remains within the bands.  
+
+3. **Momentum-Based Assumption:**  
+   - Unlike mean-reversion strategies, this breakout approach assumes that once the price breaks through an extreme level, it will continue in that direction rather than reversing.  
+   - It is most effective in **trending markets**, as prices tend to follow momentum rather than returning to the mean.  
+   - Works well when combined with **volume confirmation** or additional trend indicators to filter false breakouts.  
+
+### Code
+
 ```python
 '''
 Bollinger Band Breakout Strategy.
@@ -34,5 +56,3 @@ def strategy(data):
 
     return data
 ```
-
-## Explanation

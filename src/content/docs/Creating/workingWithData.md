@@ -3,36 +3,34 @@ title: Working With Data
 description: Let's talk about DataFrames
 ---
 
-### About the Stock Data  
+### About the Stock Data
 
-All data tables are Pandas DataFrames. If you're not familiar with Pandas DataFrames, you can think of it as a normal table. (Except optimized for further calculation and analysis).
+All stock data is stored in Pandas DataFrames. If you're not familiar with Pandas, think of it as a highly optimized table designed for data analysis and manipulation.
 
 ### Pandas DataFrames
 
-So all stock data, as manipulated inside of your 'strategy' function, is part of a Pandas DataFrame. This enables unlimited room for analysis. Pandas is an **incredibly robust** platform for data science and analysis, and is by far the best option for working with something like stock data. Use the full extent of Pandas to your advantage! We will talk about 
+In your `strategy` function, stock data is handled as a Pandas DataFrame, providing you with a powerful framework for analysis. Pandas is an **exceptionally robust** library for data science, especially for tasks like working with stock data. Be sure to leverage its full capabilities when crafting your strategies.
 
 ### Working with DataFrames
 
-As we've mentioned, it is worth it to learn a little bit about DataFrames and some operations that you can perform on them. For as much as you know how to work with DataFrames, you can apply that knowledge to programatically creating trading signals.
+Understanding how to work with DataFrames is key to effectively creating and manipulating trading signals. The more you know about DataFrame operations, the more you can do programmatically with your data.
 
-### Creating Trading Signals from Columns in DataFrame
+### Creating Trading Signals from DataFrame Columns
 
-As we've mentioned, you must add a column to your dataframe that is populated with trading signals, which can range from -1 (short) to 1 (buy).
+To implement trading signals, you need to create a new column in your DataFrame, typically named `signal`, with values ranging from `-1` (short) to `1` (buy).
 
-Our new column of signals is created/accessed with the following: `data['signal']`.
+You can access or create this column like this: `data['signal']`.
 
-**To create a column with a constant value, you can set `data['signal']` to a constant.**
+**To assign a constant value to the signal column**, you simply set `data['signal']`:
 
-- `data['signal'] = 1` creates a column of ones (buy and hold strategy)
-- `data['signal'] = -1` creates a column of negative ones (short and hold strategy)
-- `data['signal'] = 'lol'` creates a column with the string 'lol' _(don't do this, it will error)_
+- `data['signal'] = 1` creates a column with all `1`s (buy and hold strategy).
+- `data['signal'] = -1` creates a column with all `-1`s (short and hold strategy).
+- `data['signal'] = 'lol'` creates a column filled with the string `'lol'` _(this will cause an error, avoid doing this)_.
 
-### What happens with missing signals?
+### Handling Missing Signals
 
-If we were to create a `signal` column, but leave it mostly empty, the strategy would still work fine. All empty values are filled with a forward fill. This means that empty columns are filled with the most recent trading signal.
+If you leave the `signal` column mostly empty, Pandas will automatically fill empty entries with the most recent valid value using a **forward fill**. This means any gaps in the signal column are filled with the most recent trading signal.
 
 :::tip
-If we leave gaps in our signal column, **they will fill with the most previous value _(forward fill)_**. This is great because it extends a signal like buy (1) until the next specified signal. As an advanved user, you can use this systematically to build buy and hold strategies without filling every last value with a buy signal.
+If there are gaps in your signal column, **they will be filled with the previous value (forward fill)**. This is useful for strategies like buy-and-hold, where you don't need to explicitly fill every value with a buy signal.
 :::
-
- 

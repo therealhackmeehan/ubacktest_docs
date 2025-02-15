@@ -3,38 +3,37 @@ title: Basics
 description: What is behind a strategy
 ---
 
-### How do we define a strategy?  
+### What is a Strategy?
 
-A strategy is a python function, defined by name as `strategy`. This function takes in stock data as an input and returns the stock data with a column of trading signals.
+A strategy is a Python function named `strategy` that takes stock data as input and returns the same data with a column of trading signals.
 
-**Every trading strategy, _no matter how complicated_, will have these bones:**
+**All strategies, regardless of complexity, follow this structure:**
 
 ```python
 def strategy(data):
-
-    # do whatever you want in here (:
-
+    # Define your logic here
     return data
 ```
 
-As long as we have these bones, we can do whatever else we need to determine these signals. It is ok to have additional helper functions and other instances of logic as a part of our strategy!
+As long as this structure is in place, you can add any logic or helper functions needed to generate trading signals.
 
 :::caution
-If you fail to create a function named `strategy`, as we've defined above, your strategy will never be valid and will not run against stock data. Start every strategy by laying out the above foundation!
+The function must be named `strategy`, or your strategy will be invalid and won't run. Always start with this basic structure!
 :::
 
-### Where do we put the trading signals?
+### Where to Place the Trading Signals?
 
-The data that we return (using `return data`), must contain a column of trading signals, named 'signal'. You can add as many columns as you need to the DataFrame, as long as you have one named `signal`. If you add more columns to the DataFrame, you will be able to view them later alongside the result of your trading strategy.
+The returned data must include a column called `signal` (case insensitive) with trading signals. You can add additional columns for analysis, but the `signal` column is essential.
 
 :::caution
-If the table that you return does not have a column named `signal` (case insensitive), your strategy will fail every time. Our software searches specifically for this column!
+If your table lacks a column named `signal`, your strategy will fail. Our software specifically looks for this column!
 :::
 
-### What columns do we have access to in the stock data?
+### Available Stock Data Columns
 
-**Every stock data DataFrame will have `open`, `close`, `high`, `low`, `volume`, and `timestamp` columns.** Feel free to use these columns wherever you need in creating trading signals! It is recommended that in your analysis you do not name columns of these 6 names to reserve their uniqueness for analysis.
+Every stock data DataFrame includes the following columns:  
+`open`, `close`, `high`, `low`, `volume`, and `timestamp`. These are available for use in generating trading signals. Avoid naming any additional columns with these names to preserve their intended use.
 
-### How do we use this strategy?
+### Using the Strategy
 
-Once we've defined a strategy, it is _not_ tied to any particlar stock or date range. It is a platform for backtesting with whatever stock or time range, or additoinal backtest options that you so desire. 
+Once defined, your strategy is not tied to a specific stock or date range. It can be applied to any stock, time range, or backtesting setup you choose.

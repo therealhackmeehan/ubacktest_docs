@@ -7,41 +7,37 @@ description: Running and Customizing a Basic Backtest
 
 IMAGE HERE.
 
-All backtests require you to specify 4 mandatory options.
+To run a backtest, you must specify 4 mandatory options:
 
 #### 1. Symbol
 
-The stock you'd like to backtest against. We support the top ~10,000 most popular stocks.
+Choose the stock you want to backtest. We support the top ~10,000 most popular stocks.
 
 :::caution
-Make sure the stock that you have selected exists, or has gone public, in between the start and end date. As expected, you will receive an error if you try to gather data and run a test on a stock that has gone bankrupt several years prior.
+Ensure the stock has been publicly listed during your chosen date range. If you select a stock that went bankrupt before the start date, you will encounter an error when attempting to fetch data or run the test.
 :::
 
 #### 2. Start Date
 
-The day/time which you'd like to start the backtest. Your first data point will occur _after_ this data point, not _on_ this data point. (I.E. Not Inclusive)
+Select the date/time for the backtest to begin. Your first data point will be **after** this date, not on it (i.e., the start date is exclusive).
 
 #### 3. End Date
 
-The day/time which you'd like to pause your strategy, exit all positions, and see what you've got.
+Choose when you'd like to stop the backtest, exit all positions, and view the results.
 
 #### 4. Trading Frequency
 
-As it sounds, this controls the frequency at which you place your trade, constrained to within market hours.
+Set how often you want to execute trades, within market hours.
 
 ### Random Selection
 
-If you'd like to select a random stock in the S&P 500, alongside a random time interval, ranging between 1 month and 1 year. 
-
-Do note that you will receive errors in this selection, because the random time interval may not align with the random's stock IPO or availability.
+If you prefer a random stock from the S&P 500 and a random time interval (between 1 month and 1 year), you can select this option. Be aware that errors may arise if the random time interval doesn’t align with the stock’s IPO or availability.
 
 ### Reset Button
 
-To reset the backtest defaults, press this button.
+Press the reset button to return to the default backtest settings:
 
-This will provide you with the following defaults:
-
-- **Symbol:** AAPL
-- **StartDate:** 6 Months Ago
-- **EndDate:** Today
-- **Trading Frequency:** 1 day
+- **Symbol:** AAPL  
+- **Start Date:** 6 months ago  
+- **End Date:** Today  
+- **Trading Frequency:** 1 day  

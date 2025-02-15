@@ -2,6 +2,28 @@
 title: Ichimoku Cloud Strategy
 ---
 
+### Explanation & Rationale  
+
+The **Ichimoku Cloud Breakout Strategy** is a powerful **trend-following system** that identifies **trend direction, momentum, and support/resistance levels** in a single glance.  
+
+#### **Key Components:**  
+1. **Ichimoku Indicators Used:**  
+   - **Conversion Line (Tenkan-sen):** The average of the **9-period high and low**—a fast-moving indicator.  
+   - **Base Line (Kijun-sen):** The average of the **26-period high and low**—a slower-moving trend indicator.  
+   - **Price Relative to the Cloud:** Confirms the trend direction.  
+
+2. **Buy & Sell Signals:**  
+   - **Buy Signal (1):** When the **Conversion Line crosses above the Base Line**, and the price is **above the cloud**, indicating an **uptrend**.  
+   - **Sell Signal (-1):** When the **Conversion Line crosses below the Base Line**, and the price is **below the cloud**, signaling a **downtrend**.  
+   - If neither condition is met, the strategy remains **neutral (0)**.  
+
+3. **Why Use This Strategy?**  
+   - **Comprehensive Trend Analysis:** Unlike simple moving average crossovers, the **Ichimoku Cloud adds depth** by showing momentum and key support/resistance levels.  
+   - **Filters Out False Signals:** The cloud acts as a filter—trades are only taken **in the direction of the prevailing trend**.  
+   - **Used by Institutional Traders:** Ichimoku is **widely used** in forex, stocks, and crypto markets due to its effectiveness in identifying strong trends.  
+
+### Code
+
 ```python
 '''
 Ichimoku Cloud Breakout Strategy.
@@ -32,5 +54,3 @@ def strategy(data):
 
     return data
 ```
-
-## Explanation

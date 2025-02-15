@@ -5,50 +5,52 @@ description: How to programatically create trading signals.
 
 ### Recap
 
-By now, you are hopefully a little familiar with Pandas DataFrames and how to create a column of empty or constant signals.
+By now, you should be familiar with Pandas DataFrames and how to create a column of constant or empty signals.
 
-To recap, to create a column of buy signals, we run the following: `data['signal'] = 1`
+To create a simple column of buy signals, you can use:
+
+```python
+data['signal'] = 1
+```
 
 ### More Advanced Signals
 
-Of course, we want to create signals that are more complicated than just a constant, and perhaps not just a whole integer of a value of -1 or 1, but perhaps a decimal that represents a fraction of our portfolio traded.
-
-There are two major ways to designate trading signals (and a 3rd, cool option called lambda functions)
+We often need to create more complex signals, such as fractional portfolio trades, instead of just constants like `-1` or `1`. There are several ways to designate trading signals:
 
 #### 1. Vectorized Assignment
 
-Pandas gives us the ability to compare columns against each other, **_without having to loop through the the column_**.
+Pandas allows us to compare columns without looping, which is called **vectorization**. This method is more efficient and often more readable for creating trading strategies.
 
-Vectorization is a fancy way of saying this. You do not have to use this capability, but you will find it is often times more generalizable and straightforward to craft trading strategies with this technique.
-
-A Simple Example:
-_a signal that is 1 when the close price is above 100, 0 everywhere else_
+**Example**: A signal of `1` when the close price is above 100, and `0` otherwise:
 
 ```python
-data['signal'] = 0
-data['signal'](data['close'] > 100) = 1
+data['signal'] = (data['close'] > 100).astype(int)
 ```
 
-This shows how you can assign sweeping signals all in one go.
+This efficiently assigns values across the entire column in one step.
 
 #### 2. Looping
 
-While not as fancy or fun, you could also loop through the table if you'd prefer, assigning a trading signal at each time point. We'd recommend only doing this when necessary.
+While vectorization is preferred for efficiency, you can loop through the DataFrame if necessary. However, looping can be slower and should be used sparingly.
 
-A Simple Example:
-_a signal that looks at the previous day's close and assigns a 1 if it was above today's_
+**Example**: A signal that assigns `1` if the previous day's close was greater than today's close:
 
 ```python
 data['signal'] = 0
 
-numIterations = len(data)
-for i in range(2, numIterations)
+for i in range(1, len(data)):
     if data['close'][i-1] > data['close'][i]:
-        data['signal'] = 1
+        data['signal'][i] = 1
 ```
 
 #### 3. Lambda Functions
 
-write about lambda functions here
+Lambda functions allow you to create small, anonymous functions that can be applied to DataFrame columns. This is useful for more customized signal logic without defining a separate function.
 
+**Example**: A lambda function that assigns `1` if the close price is greater than the moving average of the last 5 days:
 
+```python
+data['signal'] = data['close'].apply(lambda x: 1 if x > data['close'].rolling(window=5).mean().iloc[-1] else 0)
+```
+
+This method is flexible for more complex logic but should be used with caution for performance reasons.

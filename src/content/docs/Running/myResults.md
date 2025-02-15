@@ -3,32 +3,30 @@ title: My Results
 description: Something to be proud of.
 ---
 
-### Happy With a Result?
+### Happy With Your Result?
 
-You've run a successful backtest. That is great!!
+Congratulations on running a successful backtest! 
 
-Make sure to name and save this result!
+Don't forget to **name** and **save** your result for future use.
 
-### What can I do with a saved result?
+### What Can I Do with a Saved Result?
 
 #### 1. Share
 
-You can share to other users of this app if you have their email that they used to create an account. Your strategy will pop up in their 'shared with me' area of the results page, and they will have to accept the strategy to view it.
+You can share your strategy with other users if you have their account email. Once shared, your strategy will appear in their 'Shared with Me' section on the results page. They’ll need to accept the strategy before viewing it.
 
 #### 2. Delete
 
-As it sounds.
+You can delete your result at any time.
 
 :::caution
-If you've shared the strategy, it will also delete the strategy for whoever you've shared it with as well.
+If you’ve shared the strategy, deleting it will also remove it from the accounts of anyone you’ve shared it with.
 :::
 
 #### 3. Rename
 
-As it sounds. This will rename the strategy if you've shared it with anyone on their end as well.
+Rename your strategy. If you’ve shared it, the new name will reflect for all users.
 
 #### 4. Lock/Unlock
 
-You can control whether or not your strategy is visible on the global leaderboard. Don't worry, even 'public' strategies will never disclose the code or inner workings of your strategy!
-
-
+Control whether your strategy appears on the global leaderboard. Even public strategies won’t expose your code or inner workings!
