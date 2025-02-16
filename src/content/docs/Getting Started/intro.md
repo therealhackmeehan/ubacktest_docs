@@ -11,13 +11,17 @@ At its core, creating a trading strategy means **deciding when to buy, sell, or 
 
 ### Trading Signal Basics:
 - **1** → Buy
-- **-1** → Sell (or Short)
+- **-1** → Short
 - **0** → No action
+
+:::tip
+You can assign signals to fractional values as well! For instance, a **signal of .5** indicates buying the asset with **half (50%)** the principal in your portfolio.
+::: 
 
 These signals will guide the backtesting engine to simulate what would’ve happened if you'd followed those decisions with historical stock data.
 
 ### Here’s What It Looks Like:
-Let’s say you have stock data that looks like this:
+The backtest engine may supply you with data that looks like this.
 
 ```
      high    low     open    close   volume    timestamp
@@ -29,7 +33,7 @@ Let’s say you have stock data that looks like this:
 ...    ...     ...     ...     ...      ...         ...
 ```
 
-Your task is to add a **column of signals** next to the stock data:
+Your task is to add a **column of signals** next to the stock data. For example:
 
 ```
 signal
@@ -45,6 +49,8 @@ signal
 1
 1
 ```
+
+Don't worry, we will show you how to do this.
 
 ### What Happens Next?
 The backtesting engine will take these signals and simulate trades, showing you how a strategy would have performed in the past. This gives you the chance to evaluate your approach and refine it to improve your results.

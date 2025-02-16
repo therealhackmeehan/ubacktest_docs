@@ -8,9 +8,6 @@ export default defineConfig({
 		starlight({
 			title: 'Jack Trading',
 			customCss: ['./src/styles/custom.css'],
-			social: {
-				github: 'https://github.com/withastro/starlight',
-			},
 			sidebar: [
 				{
 					label: 'Getting Started',
@@ -25,6 +22,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Deployment',
+					badge: 'BETA',
 					autogenerate: { directory: 'Deployment' },
 				},
 				{

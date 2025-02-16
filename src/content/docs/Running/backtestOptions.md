@@ -31,7 +31,11 @@ Set how often you want to execute trades, within market hours.
 
 ### Random Selection
 
-If you prefer a random stock from the S&P 500 and a random time interval (between 1 month and 1 year), you can select this option. Be aware that errors may arise if the random time interval doesn’t align with the stock’s IPO or availability.
+If you prefer a random stock from the S&P 500 and a random time interval (between 1 month and 1 year), you can select this button. 
+
+:::caution
+Be aware that errors may arise if the random time interval doesn’t align with the company's lifetime.
+:::
 
 ### Reset Button
 
