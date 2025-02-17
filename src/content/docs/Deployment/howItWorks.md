@@ -34,6 +34,12 @@ Let’s say you have an **[RSI-based strategy](examples/rsi/)**:
 
 This same process applies to any strategy you develop—whether it’s momentum-based, mean reversion, or machine-learning-driven.  
 
+### What Happens if an Error Occurs?
+
+If your strategy encounters a coding error or any other issue during execution, **your current position will remain unchanged**—no new trades will be placed.  
+
+To ensure your strategy performs as expected, **regularly monitor your portfolio**. An error-prone strategy can severely impact its effectiveness, potentially preventing trades from being executed at all.
+
 ### Deploy & Monitor
 
 Once deployed, your script will continue running on the cloud, executing trades and logging performance. You can monitor its behavior in real-time and make adjustments as needed.  

@@ -43,11 +43,6 @@ signal
 1
 1
 ... 
-1
-0
-0
-1
-1
 ```
 
 Don't worry, we will show you how to do this.
