@@ -33,23 +33,18 @@ def strategy(data):
     return data
 ```
 
-### Understanding the Strategy Function  
+### Understanding the Strategy Code  
 
-Every trading strategy is defined as a Python function named `strategy`. This function:  
-1. **Accepts** a table of stock data as input.  
-2. **Modifies** the table by adding a `signal` column.  
-3. **Returns** the updated table, which the backtesting engine will use.  
+Every trading strategy (ours included) is defined as a Python function named `strategy`. This function:  
+1. **Accepts** a table of stock data as input. (`def strategy(data)`)
+2. **Modifies** the table by adding a `signal` column. (`data['signal'] = ...`)  
+3. **Returns** the updated table, which the backtesting engine will use.  (`return data`)
 
-The dataset always contains columns such as:  
-- `timestamp`, `open`, `close`, `high`, `low`, `volume`  
-
-You can use this data however you like to build and refine your trading strategies.  
-
-### Applying Our Random Strategy  
+### Where the Magic Happens
 
 A valid trading strategy must include a **`signal` column**, which determines whether to buy or short an asset on each trading day.  
 
-In our case, we simply assign random -1 or 1 values to the column. We use the numpy library, and make sure the number of signals is equal to the number of timepoints:
+In our case, we simply assign random -1 or 1 values to the column. We use the NumPy library, and make sure the number of signals is equal to the number of timepoints:
 
 ```python
 data['signal'] = np.random.choice([-1, 1], size=len(data))
@@ -73,18 +68,19 @@ If you've followed along, you'll see a chart displaying your portfolio's perform
 
 ![An Example Strategy](../../../assets/example.png)
 
-- The **blue line** represents the trading signals over time.  
-- The portfolio starts with **$1** and fluctuates based on the random signals.
-- Funny enough, we actually outperformed `AAPL`, but let’s be clear—it’s generally not a great idea to trade randomly!
+- The **blue line** represents the trading signals over time.
+- The **candlestick** data is that of `AAPL`'s open/high/low/close price over the same period.
+- Our portfolio (**black line**) starts at **$1** and fluctuates based on the random signals.
+> Funny enough, we actually outperformed `AAPL`, but let’s be clear—it’s generally not a great idea to trade randomly!
 
 ### Next Steps  
 
-- **Save your results** to compare later.  
+- **Save your result** to compare later.  
 - **Try different stocks & time periods** to see variations in performance.  
 - **Modify the strategy** to introduce more structure—maybe adding trend-following or mean-reversion rules!  
-- **Try one of our many examples!**
+- [**Try one of our many examples!**](/examples/)
 
 ### Can I Actually Make Money?  
 
-If you're serious about deploying a profitable strategy, check out our **Deployment Section** to learn how to launch strategies with real capital.  
+If you're serious about deploying a profitable strategy, check out our [**Deployment Section**](../deployment/tutorial) to learn how to launch strategies in live markets.  
 

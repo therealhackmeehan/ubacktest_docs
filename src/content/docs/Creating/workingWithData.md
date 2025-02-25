@@ -17,9 +17,7 @@ All stock data is stored in **Pandas DataFrames**. If you're not familiar with P
 ...    ...     ...     ...     ...      ...         ...
 ```
 
-### Pandas DataFrames?
-
-In your `strategy` function, stock data is handled as a Pandas DataFrame, providing you with a powerful framework for analysis. Pandas is an **exceptionally robust** library for data science, especially for tasks like working with stock data. Be sure to leverage its full capabilities when crafting your strategies.
+ Pandas is an **exceptionally robust** library for data science, especially for tasks like working with stock data. Be sure to leverage its full capabilities when crafting your strategies.
 
 ### Working with DataFrames
 
@@ -28,10 +26,10 @@ Understanding how to work with DataFrames is key to effectively creating and man
 ### Creating Trading Signals from DataFrame Columns
 
 :::note
-The official term for a column in a Pandas DataFrame is a `series`, so you may see that language used interchangeably.
+The official term for a column in a Pandas DataFrame is a `series`, so you may see that language used interchangeably across the web.
 :::
 
-To implement trading signals, you need to create a new column in your DataFrame, typically named `signal`, with values ranging from `-1` (short) to `1` (buy).
+To implement trading signals, you need to create a new column in your DataFrame, named `signal`, with values ranging from `-1` (short) to `1` (buy).
 
 You can access or create this column like this: `data['signal']`.
 
@@ -41,19 +39,17 @@ You can access or create this column like this: `data['signal']`.
 - `data['signal'] = -1` creates a column with all `-1`s (short and hold strategy).
 - `data['signal'] = 'lol'` creates a column filled with the string `'lol'` _(this will cause an error, avoid doing this)_.
 
-Your final signals column may look something like this:
+If you run `data['signal'] = 1`, your final signals column will look something like this:
 
 ```
 signal
-0
 1
 1
 1
 1
 ... 
 1
-0
-0
+1
 1
 1
 ```
@@ -62,31 +58,31 @@ signal
 
 If you leave the `signal` column mostly empty, Pandas will automatically fill empty entries with the most recent valid value using a **forward fill**. This means any gaps in the signal column are filled with the most recent trading signal.
 
-```
-signal
-1
-NaN
-NaN
-NaN
-NaN
-```
-becomes
-```
-signal
-1
-1
-1
-1
-1
-```
+>```
+>signal
+>1
+>NaN
+>NaN
+>NaN
+>NaN
+>```
+>becomes
+>```
+>signal
+>1
+>1
+>1
+>1
+>1
+>```
 
 :::tip
-If there are gaps in your signal column, **they will be filled with the previous value (forward fill)**. This is useful for strategies like buy-and-hold, where you don't need to explicitly fill every value with a buy signal, just the first timepoint.
+If there are gaps in your signal column, **they will be filled with the previous value (forward fill)**. This is useful for strategies like buy-and-hold, where you don't technically need to explicitly fill every value with a buy signal, just the first timepoint.
 :::
 
 ### More Resources
 
-It can be helpful to look through some of the Pandas documentation. They do a better job than we do in describing the DataFrame and its capabilities!
+We recommend scanning through the Pandas documentation. They do a better job than we do in describing the DataFrame and its capabilities!
 
 - A brief intro to DataFrames: ([Click Here](https://pandas.pydata.org/docs/getting_started/intro_tutorials/01_table_oriented.html))
 - Pandas, a 10-minute crash course: ([Click Here](https://pandas.pydata.org/docs/user_guide/10min.html))

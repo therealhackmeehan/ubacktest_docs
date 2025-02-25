@@ -21,7 +21,7 @@ You can assign signals to fractional values as well! For instance, a **signal of
 These signals will guide the backtesting engine to simulate what would’ve happened if you'd followed those decisions with historical stock data.
 
 ### Here’s What It Looks Like:
-The backtest engine may supply you with data that looks like this.
+The backtest engine will supply you with data that looks like this:
 
 ```
      high    low     open    close   volume    timestamp
@@ -33,7 +33,7 @@ The backtest engine may supply you with data that looks like this.
 ...    ...     ...     ...     ...      ...         ...
 ```
 
-Your task is to add a **column of signals** next to the stock data. For example:
+Your goal is to analyze this historical stock data, (hopefully) uncover patterns, and generate a **column of signals** that dictate buy/sell actions—just as if you were making decisions in real-time with the data at hand. These signals might look like:
 
 ```
 signal
@@ -48,10 +48,10 @@ signal
 Don't worry, we will show you how to do this.
 
 ### What Happens Next?
-The backtesting engine will take these signals and simulate trades, showing you how a strategy would have performed in the past. This gives you the chance to evaluate your approach and refine it to improve your results.
+The backtesting engine will __take these signals and simulate trades__, showing you how a strategy would have performed in the past, without introducing the bias of the future. This gives you the chance to evaluate your approach and refine it to improve your results.
 
 ### Does It Sound Hard?
-Not at all! We’re here to make it easy for you. Here's how simple a **buy-and-hold strategy** is in Python:
+Don't fear! We’re here to make it easy for you. The following is all that is required for a simple **buy-and-hold strategy**:
 
 ```python
 def strategy(data):

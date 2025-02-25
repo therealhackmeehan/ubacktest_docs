@@ -1,5 +1,5 @@
 ---
-title: Basics
+title: Fundamentals
 description: What is behind a strategy
 ---
 
@@ -23,7 +23,7 @@ You must define a function named `strategy`, or your strategy will be invalid an
 
 ### Where to Place the Trading Signals?
 
-The returned data must include a column called `signal` (case insensitive) with trading signals. You can add additional columns for analysis, but the `signal` column is essential.
+The returned data must include a column called `signal` (case insensitive) with trading signals. You can (and should) add additional columns for analysis, but the `signal` column is essential.
 
 :::caution
 If your table lacks a column named `signal`, your strategy will fail. Our software specifically looks for this column!
@@ -31,8 +31,9 @@ If your table lacks a column named `signal`, your strategy will fail. Our softwa
 
 ### Available Stock Data Columns
 
-Every stock data DataFrame includes the following columns:  
-`open`, `close`, `high`, `low`, `volume`, and `timestamp`. These are available for use in generating trading signals. Avoid naming any additional columns with these names to preserve their intended use.
+Every stock data DataFrame ([a fancy word for a table](/creating/workingwithdata/)) includes the following columns:  
+`open`, `close`, `high`, `low`, `volume`, and `timestamp`. 
+These are available for use in generating trading signals. Avoid naming any additional columns with these names to preserve their intended use.
 
 ### Using the Strategy
 

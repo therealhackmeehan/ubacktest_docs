@@ -1,5 +1,5 @@
 ---
-title: My Results
+title: Your Results
 description: Something to be proud of.
 ---
 
@@ -15,11 +15,11 @@ Don't forget to **name** and **save** your result for future use. It will appear
 
 #### 1. Share
 
-You can share your strategy with other users if you have their account email. Once shared, your strategy will appear in their 'Shared with Me' section on the results page. They’ll need to accept the strategy before viewing it.
+You can share your strategy with other users if they have an account with us! Once shared, your strategy will appear in their 'Shared with Me' section on the results page. They’ll need to accept the strategy before being able to view it.
 
 #### 2. Lock/Unlock
 
-Control whether your strategy appears on the global leaderboard. Even public strategies won’t expose your code or inner workings!
+Control whether your strategy appears on the global leaderboard. Don't worry, even public strategies won’t expose your code or inner workings!
 
 #### 3. Rename
 

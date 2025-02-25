@@ -15,7 +15,7 @@ data['signal'] = 1
 
 ### More Advanced Signals
 
-We often need to create more complex signals, such as fractional portfolio trades, instead of just constants like `-1` or `1`. There are several ways to designate trading signals:
+We often need to create more complex signals, instead of just constants like `-1` or `1`. There are several ways to designate trading signals:
 
 #### 1. Vectorized Assignment
 
@@ -66,7 +66,7 @@ data['signal'] = data['close'].apply(
 
 This method is flexible for more complex logic but should be used with caution for performance reasons.
 
-See the examples for specific use cases involving these methods!
+See the [examples](/examples/) for specific use cases involving these methods!
 
 ### Other Columns in the DataFrame
 
