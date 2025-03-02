@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'uBacktest. docs.',
+			title: 'uBacktest docs',
 			logo: {
 				src: './src/assets/logo.png'
 			},
@@ -36,7 +36,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Creating Strategies',
-					items: ['creating/fundamentals', 'creating/workingwithdata', 'creating/creatingsignals', 'creating/helpfulmoves', 'creating/pitfalls'],
+					items: ['creating/fundamentals', 'creating/workingwithdata', 'creating/creatingsignals', 'creating/partialtrades', 'creating/helpfulmoves', 'creating/pitfalls'],
 				},
 				{
 					label: 'Running Strategies',

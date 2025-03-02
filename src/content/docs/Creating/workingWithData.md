@@ -5,7 +5,7 @@ description: Let's talk about DataFrames
 
 ### About the Stock Data
 
-All stock data is stored in **Pandas DataFrames**. If you're not familiar with Pandas, think of it as a highly optimized table designed for data analysis and manipulation.
+All stock data is stored in **Pandas DataFrames**. If you're not familiar with Pandas DataFrames, think of them as a highly optimized table designed for data analysis and manipulation.
 
 ```
      high    low     open    close   volume    timestamp
@@ -23,7 +23,7 @@ All stock data is stored in **Pandas DataFrames**. If you're not familiar with P
 
 Understanding how to work with DataFrames is key to effectively creating and manipulating trading signals. The more you know about DataFrame operations, the more you can do programmatically with your data.
 
-### Creating Trading Signals from DataFrame Columns
+### Adding Trading Signals from the DataFrame
 
 :::note
 The official term for a column in a Pandas DataFrame is a `series`, so you may see that language used interchangeably across the web.

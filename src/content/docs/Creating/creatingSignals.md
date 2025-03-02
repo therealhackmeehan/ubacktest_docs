@@ -1,5 +1,5 @@
 ---
-title: Creating a Column of Trading Signals
+title: Creating Trading Signals
 description: How to programatically create trading signals.
 ---
 

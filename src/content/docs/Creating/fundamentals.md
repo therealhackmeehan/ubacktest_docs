@@ -3,15 +3,17 @@ title: Fundamentals
 description: What is behind a strategy
 ---
 
-### What is a Strategy?
+### What Defines a Strategy?
 
-A strategy is a Python function named `strategy` that takes stock data as input and returns the same data with a column of trading signals.
+A trading strategy is a Python function named `strategy` that takes stock data as input and returns the same data with a column of trading signals.
 
 **All strategies, regardless of complexity, follow this structure:**
 
 ```python
 def strategy(data):
-    # Define your logic here
+
+    # Define your strategy logic in here! #
+
     return data
 ```
 

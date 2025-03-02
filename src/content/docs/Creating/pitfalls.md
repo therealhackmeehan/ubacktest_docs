@@ -3,11 +3,11 @@ title: Common Pitfalls
 description: Some things to be aware of...
 ---
 
-### Be Skeptical and Critical  
-
 :::danger  
 ##### If a strategy seems too good to be true, it probably is.  
 :::  
+
+### Be Skeptical and Critical  
 
 If your backtests show consistent double or triple-digit returns, you might be unintentionally introducing flaws that inflate performance. Here’s what to watch out for:
 
@@ -17,6 +17,10 @@ Using future data in your strategy, even unintentionally, makes your results unr
 
 > **Example:**  
 > A moving average that incorporates future prices rather than lagging behind can give your strategy unfair foresight, making it seem far more effective than it actually is.  
+
+:::note
+We perform a basic check for **lookahead bias** when executing your strategy, but we can't guarantee that all instances of this issue will be caught. Our check works by applying your strategy at different time points to detect whether **future data** has improperly influenced past signals—something that should remain fixed.
+:::
 
 ### 2. Survivorship Bias  
 
@@ -29,6 +33,7 @@ If you're only testing on stocks that have done well, your results will be skewe
 
 High-frequency strategies may seem unstoppable—until you factor in trading fees and slippage. Even small costs can erode profits over time. While its not fun or inspiring, you _can_ [incorporate trading costs into your strategy](/running/advancedbacktestoptions/).
 
-:::note  
+---
+:::tip[Stay Positive!]
 Strong strategies do exist, but realistic expectations are key. Start with simple, robust ideas and refine them with skepticism and rigor.  
 :::

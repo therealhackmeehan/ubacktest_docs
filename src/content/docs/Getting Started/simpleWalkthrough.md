@@ -56,7 +56,7 @@ Once this is done, we return the modified dataset—**with the `signal` column a
 
 Now that our strategy is ready, let’s run it against real stock data.  
 
-1. Open the **Strategy Editor**.  
+1. Open the **Strategy Editor**. Copy and paste in the strategy from above.
 2. Select a stock and a date range.  
 3. Run the strategy.  
 

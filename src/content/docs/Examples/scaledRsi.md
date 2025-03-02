@@ -40,5 +40,3 @@ def strategy(data):
 
     return data
 ```
-
-## Explanation

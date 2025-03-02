@@ -5,7 +5,7 @@ description: A collection of handy metrics and signals that are good to know and
 
 Here's a collection of essential Pandas functions, tips, tricks, and indicators commonly used in trading metric and signal calculations. Even when not indicators themselves, many of these form the foundation for financial indicators that power buy/sell decisions. 
 
-You'll notice a bunch of the following indicators/metrics make use of the `rolling()` function. Read more about it [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html). The `ewm()` method is also integral to many trading indicators. You can read more about it [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.ewm.html).
+>You'll notice a bunch of the following indicators/metrics make use of the `rolling()` function. Read more about it [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html). The `ewm()` method is also integral to many trading indicators. You can read more about it [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.ewm.html).
 
 ## Basic Utilities and Metrics
 

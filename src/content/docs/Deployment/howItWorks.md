@@ -3,6 +3,8 @@ title: How it Works
 description: Learn how to the trading signals are generated, live.
 ---
 
+### Set Your Strategy Free
+
 **Deploy your trading strategy to the cloud and automate execution.**  
 
 Our **beta deployment** process is designed to help you transition from backtesting to real-time execution. With this setup, your strategy can run live, making simulated trades and adapting dynamically to market data.  
@@ -58,12 +60,12 @@ This will all be covered in the [step-by-step tutorial](/deployment/tutorial/).
 
 ___
 
-## Important Note on Fractional Trading
+### Important Note on Fractional Trading
 
-To execute trades based on specified dollar amounts, we rely on fractional shares. Alpaca supports this for **buy orders**, but **fractional short selling is not yet available**. All short sales are rounded down to the nearest whole share. For instance, if your strategy signals a short sale of 31.55 shares of AAPL, only 31 shares will be sold. While any subsequent buy orders will rebalance your portfolio, this rounding may affect your strategy's execution.  
+To execute trades based on specified dollar amounts, we rely on fractional shares. Alpaca supports this for **buy orders**, but [**fractional short selling is not yet available**](https://docs.alpaca.markets/docs/fractional-trading#:~:text=We%20do%20not%20support%20short%20sales%20in%20fractional%20orders.%20All%20fractional%20sell%20orders%20are%20marked%20long.). All short sales are rounded down to the nearest whole share. For instance, if your strategy signals a short sale of 31.55 shares of AAPL, only 31 shares will be sold. While any subsequent buy orders will rebalance your portfolio, this rounding may affect your strategy's execution.  
 
 :::danger  
-**Important Notice:** To reiterate, Alpaca does not currently support fractional short selling. As a result, all short sales and buybacks of long positions are rounded down to the nearest full share. This will impact expected performance and is one of the _key reasons why this feature remains in **BETA**_.  
+**Important Notice:** To reiterate, Alpaca does not currently support fractional short selling. As a result, all short sales and buybacks of long positions are rounded down to the nearest full share. This will impact expected performance and is one of the _key reasons why deployment remains in **BETA**_.  
 :::
 ___
 
