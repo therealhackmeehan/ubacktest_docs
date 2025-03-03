@@ -28,19 +28,18 @@ At each execution interval (e.g., daily), your script will run, performing the f
 2. **Generate Trading Signals** – Apply your beloved `strategy` function to recent market data; use the most recent signal to determine whether to **buy, sell, or hold**.  
 
 3. **Calculate Trade Size** – Determine the number of shares to buy or sell based on your portfolio value and cash balance.  
-   > **Example:** A new trading signal of **0.7** appears, and you currently hold no positions. With **$100,000 in cash**, you aim to allocate **$70,000** to the stock. If the stock price is **$100 per share**, you need to **buy 70 shares**.  
-
+   > **Example:** A new trading signal of **0.7** appears, and you currently hold no positions. With **$100,000 in cash**, you aim to allocate **$70,000** to the stock.
 4. **Execute Trade** – Using the calculated share quantity, submit a **buy** or **sell** order through Alpaca.  
 
 ##### Example Order Submission  
 
 ```python
-api.submit_order(
+trading_client.submit_order(
     symbol="AAPL",
-    qty=70,  # Calculated number of shares
+    notional=70000.00,
     side="buy",
     type="market",
-    time_in_force="gtc",  # Good till canceled
+    time_in_force="day",
 )
 ```  
 
@@ -69,6 +68,6 @@ To execute trades based on specified dollar amounts, we rely on fractional share
 :::
 ___
 
-### Ready to Rock
+#### Ready to Rock!
 
 We've covered the basics of the deployment process and discussed the hazards of trading with real capital. Now, you're ready to bring your strategy to life: **[Follow our tutorial to get started](tutorial/)!**

@@ -29,6 +29,10 @@ export default defineConfig({
 			],
 			favicon: './favicon.ico',
 			customCss: ['./src/styles/custom.css'],
+			components: {
+				// Override the default `SocialIcons` component w/ link to uBacktest.com
+				SocialIcons: './src/components/GoToUBacktest.astro',
+			},
 			sidebar: [
 				{
 					label: 'Getting Started',
@@ -45,7 +49,7 @@ export default defineConfig({
 				{
 					label: 'Deployment',
 					badge: 'BETA',
-					items: ['deployment/disclaimer', 'deployment/howitworks', 'deployment/tutorial'],
+					items: ['deployment/disclaimer', 'deployment/howitworks', 'deployment/tutorial', 'deployment/monitoringsuccess'],
 				},
 				{
 					label: 'Examples',
