@@ -15,7 +15,7 @@ Don't let AWS intimidate you—we'll walk you through deploying your script step
 
 1. Go to your strategy's page.
 2. Scroll down to the **Deployment** section.  
-   _![Deployment Dashboard](../../../assets/example.png)_
+   _![Deployment Dashboard](../../../assets/light_deploy.png)_
 3. Fill in the required fields to match your successful backtest.
 4. Click **Generate Code**—your trading strategy will now appear in the editor!
 

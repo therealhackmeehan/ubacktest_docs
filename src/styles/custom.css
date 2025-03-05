@@ -27,3 +27,5 @@
 	--sl-color-gray-7: #f3f7f9;
 	--sl-color-black: #ffffff;
 }
+
+img[alt="backtest options"] { width: 350px; }

@@ -36,7 +36,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Getting Started',
-					items: ['getting-started/intro', 'getting-started/simplewalkthrough'],
+					items: ['getting-started/intro', 'getting-started/simplewalkthrough', 'getting-started/advancedwalkthrough'],
 				},
 				{
 					label: 'Creating Strategies',
@@ -50,10 +50,12 @@ export default defineConfig({
 					label: 'Deployment',
 					badge: 'BETA',
 					items: ['deployment/disclaimer', 'deployment/howitworks', 'deployment/tutorial', 'deployment/monitoringsuccess'],
+					collapsed: true,
 				},
 				{
 					label: 'Examples',
 					autogenerate: { directory: 'Examples' },
+					collapsed: true,
 				},
 			],
 		}),

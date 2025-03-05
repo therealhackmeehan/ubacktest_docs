@@ -15,7 +15,7 @@ At its core, creating a trading strategy means **deciding when to buy, sell, or 
 - **0** → No Investment
 
 :::tip
-You can assign signals to fractional values as well! For instance, a **signal of .5** indicates buying the asset with **half (50%)** the principal in your portfolio, and preserving the other 50% as cash. Learn more (later on)
+You can assign signals to fractional values (like `.5`) as well! We'll learn more about that [later](../../creating/partialtrades).
 ::: 
 
 These signals will guide the backtesting engine to simulate what would’ve happened if you'd followed those decisions with historical stock data.
@@ -47,6 +47,14 @@ def strategy(data):
     data['signal'] = 1  # Always buy
     return data
 ```
+
+<details>
+<summary>What does this look like in the Strategy Editor?</summary>
+
+![simple strategy](../../../assets/light_editorOnly.png)
+*beautiful.*
+
+</details>
 
 That’s it! You can tweak it further as you learn and grow in building more complex strategies. 
 

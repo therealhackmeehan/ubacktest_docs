@@ -9,7 +9,7 @@ Congratulations on running a successful backtest!
 
 Don't forget to **name** and **save** your result for future use. It will appear on your results page:
 
-![Saved Results](../../../assets/results.png)
+![Saved Results](../../../assets/light_results.png)
 
 ### What Can I Do with a Saved Result?
 

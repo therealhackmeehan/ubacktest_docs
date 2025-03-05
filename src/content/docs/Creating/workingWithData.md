@@ -3,9 +3,25 @@ title: Working With Data
 description: Let's talk about DataFrames
 ---
 
+### Your Role  
+
+Your primary task is to take stock data, analyze it, and extract meaningful trends to generate buy and sell signals based on logical, programmatic rules.  
+
+#### What does this involve?  
+
+It can mean many things, not limited to but including:  
+
+- Calculating moving averages and identifying buy signals at low points.  
+- Detecting trend reversals using indicators like RSI or MACD.  
+- Parsing historical price data to find patterns in volatility.  
+
+To do this effectively, you need to understand the structure of the available data within your strategy function.
+
 ### About the Stock Data
 
 All stock data is stored in **Pandas DataFrames**. If you're not familiar with Pandas DataFrames, think of them as a highly optimized table designed for data analysis and manipulation.
+
+> Pandas is an **exceptionally robust** library for data science, especially for tasks like working with stock data. Be sure to leverage its full capabilities when crafting your strategies.
 
 ```
      high    low     open    close   volume    timestamp
@@ -17,29 +33,23 @@ All stock data is stored in **Pandas DataFrames**. If you're not familiar with P
 ...    ...     ...     ...     ...      ...         ...
 ```
 
- Pandas is an **exceptionally robust** library for data science, especially for tasks like working with stock data. Be sure to leverage its full capabilities when crafting your strategies.
+As pictured above, every stock data DataFrame includes the following columns:  
+`open`, `close`, `high`, `low`, `volume`, and `timestamp`. 
+These are available for use in generating trading signals. Avoid naming any additional columns with these names to preserve their intended use.
 
-### Working with DataFrames
+On the [next page](./creatingSignals.md), you'll learn how to access data—such as `close` prices—calculate key metrics, and generate trading signals.
 
-Understanding how to work with DataFrames is key to effectively creating and manipulating trading signals. The more you know about DataFrame operations, the more you can do programmatically with your data.
-
-### Adding Trading Signals from the DataFrame
-
-:::note
-The official term for a column in a Pandas DataFrame is a `series`, so you may see that language used interchangeably across the web.
-:::
+### Adding Constant Trading Signals to the DataFrame
 
 To implement trading signals, you need to create a new column in your DataFrame, named `signal`, with values ranging from `-1` (short) to `1` (buy).
 
-You can access or create this column like this: `data['signal']`.
-
-**To assign a constant value to the signal column**, you simply set `data['signal']`:
+**To assign a constant value to the signal column**, you simply set `data['signal']` to a constant:
 
 - `data['signal'] = 1` creates a column with all `1`s (buy and hold strategy).
 - `data['signal'] = -1` creates a column with all `-1`s (short and hold strategy).
 - `data['signal'] = 'lol'` creates a column filled with the string `'lol'` _(this will cause an error, avoid doing this)_.
 
-If you run `data['signal'] = 1`, your final signals column will look something like this:
+If you run and return `data['signal'] = 1`, your final signals column will look something like this:
 
 ```
 signal
@@ -53,32 +63,6 @@ signal
 1
 1
 ```
-
-### Handling Missing Signals
-
-If you leave the `signal` column mostly empty, Pandas will automatically fill empty entries with the most recent valid value using a **forward fill**. This means any gaps in the signal column are filled with the most recent trading signal.
-
->```
->signal
->1
->NaN
->NaN
->NaN
->NaN
->```
->becomes
->```
->signal
->1
->1
->1
->1
->1
->```
-
-:::tip
-If there are gaps in your signal column, **they will be filled with the previous value (forward fill)**. This is useful for strategies like buy-and-hold, where you don't technically need to explicitly fill every value with a buy signal, just the first timepoint.
-:::
 
 ### More Resources
 

@@ -3,17 +3,23 @@ title: Partial Portfolio Allocation
 description: Simulate maintaining some of your portfolio as cash.
 ---
 
-### No Need to Go All In  
+### No Need to Go All In.
 
-In real-world trading, it’s often wise to avoid committing your entire portfolio to a single position. This page covers the principles and strategies behind trading with a fraction of your portfolio while keeping the remainder in cash.  
+In real-world trading, it’s often wise to avoid committing your entire portfolio to a single position. This page covers the principles and strategies behind trading with a fraction of your portfolio (I.E. _50%_) while keeping the remainder in cash.  
 
-### What Does a Signal of **0.5** Really Mean?  
+### What Does a Fractional Signal of **0.5** Really Mean?  
 
 A signal of **0.5** represents allocating **50% of your portfolio** to a position while keeping the other 50% in cash. It’s a way to maintain exposure to the market while managing risk:
 
 ```python
 data['signal'] = .5
 ```
+
+:::note
+Your signal doesn't have to be __.5__! Trading signals can even be specified up to four decimal places.  
+
+For example, to allocate **12.23%** of your portfolio, set the signal to **.1223**. To allocate **55%** of your portfolio, set the signal to **.55**. You get the point.
+:::
 
 ### What Do **Consecutive Signals of 0.5** Mean?  
 

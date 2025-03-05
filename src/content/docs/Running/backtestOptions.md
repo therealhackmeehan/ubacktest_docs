@@ -7,7 +7,7 @@ description: Running and Customizing a Basic Backtest
 
 To run a backtest, you must specify 4 mandatory options:
 
-![Simple Backtest Options](../../../assets/backtestOptions.png)
+![backtest options](../../../assets/light_engine.png)
 
 #### 1. Symbol
 
@@ -45,3 +45,10 @@ Press the reset button to return to the default backtest settings:
 - **Start Date:** 12 months ago  
 - **End Date:** 6 months ago  
 - **Trading Frequency:** 1 day  
+
+### Have Fun.
+
+Run your strategies and watch the results/metrics pour in!
+
+![sample stock result](../../../assets/result_stock1.png)
+![sample sp comparison](../../../assets/light_SP.png)

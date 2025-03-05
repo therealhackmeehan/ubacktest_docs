@@ -46,18 +46,6 @@ data['roc_10'] = data['close'].pct_change(periods=10) * 100
 ```  
 Measures the percentage change in price over the last 10 periods to identify momentum shifts.  
 
-### Log Returns  
-```python
-data['log_return'] = np.log(data['close'] / data['close'].shift(1))
-```  
-Computes the logarithmic return between consecutive closing prices for a normalized measure of returns.  
-
-### Cumulative Return  
-```python
-data['cumulative_return'] = (1 + data['close'].pct_change()).cumprod()
-```  
-Tracks the compounded return over time, useful for evaluating long-term performance.  
-
 ### Rolling Maximum (Highest Close Over N Days)  
 ```python
 data['rolling_max_20'] = data['close'].rolling(window=20).max()

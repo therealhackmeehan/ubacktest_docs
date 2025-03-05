@@ -68,6 +68,32 @@ This method is flexible for more complex logic but should be used with caution f
 
 See the [examples](/examples/) for specific use cases involving these methods!
 
+### Handling Missing Signals
+
+If you leave the `signal` column mostly empty, Pandas will automatically fill empty entries with the most recent valid value using a **forward fill**. This means any gaps in the signal column are filled with the most recent trading signal.
+
+>```
+>signal
+>1
+>NaN
+>NaN
+>NaN
+>NaN
+>```
+>becomes
+>```
+>signal
+>1
+>1
+>1
+>1
+>1
+>```
+
+:::tip
+If there are gaps in your signal column, **they will be filled with the previous value (forward fill)**. This is useful for strategies like buy-and-hold, where you don't technically need to explicitly fill every value with a buy signal, just the first timepoint.
+:::
+
 ### Other Columns in the DataFrame
 
 We recommend adding all key metrics as columns to your DataFrame. Our software automatically detects these additional columns, allowing you to view them alongside your strategy results for deeper insights.  

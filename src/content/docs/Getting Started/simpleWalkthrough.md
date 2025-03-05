@@ -66,7 +66,7 @@ For this example, we'll use **AAPL** stock from **Jan 1, 2022, to Mar 1, 2022**.
 
 If you've followed along, you'll see a chart displaying your portfolio's performance. We lost **~2%** of our initial capital.
 
-![An Example Strategy](../../../assets/example.png)
+![An Example Strategy](../../../assets/result_stock1.png)
 
 - The **blue line** represents the trading signals over time.
 - The **candlestick** data is that of `AAPL`'s open/high/low/close price over the same period.

@@ -31,11 +31,7 @@ The returned data must include a column called `signal` (case insensitive) with 
 If your table lacks a column named `signal`, your strategy will fail. Our software specifically looks for this column!
 :::
 
-### Available Stock Data Columns
-
-Every stock data DataFrame ([a fancy word for a table](/creating/workingwithdata/)) includes the following columns:  
-`open`, `close`, `high`, `low`, `volume`, and `timestamp`. 
-These are available for use in generating trading signals. Avoid naming any additional columns with these names to preserve their intended use.
+Keep reading this documentation to learn more about creating trading signals.
 
 ### Using the Strategy
 
