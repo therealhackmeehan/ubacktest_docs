@@ -5,7 +5,7 @@ description: Some Optional Options for Ultimate Customizability
 
 Click the `advanced options` dropdown to reveal 3 additional customization options.
 
-![backtest options](../../../assets/light_engineWithAdvanced.png)
+![advanced backtest options](../../../assets/light_engineWithAdvanced.png)
 
 ### 1. Execute Trade @
 

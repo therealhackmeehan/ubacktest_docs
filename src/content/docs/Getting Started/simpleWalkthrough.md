@@ -64,14 +64,14 @@ For this example, we'll use **AAPL** stock from **Jan 1, 2022, to Mar 1, 2022**.
 
 ### Backtest Results  
 
-If you've followed along, you'll see a chart displaying your portfolio's performance. We lost **~2%** of our initial capital.
+If you've followed along, you'll see a chart displaying your portfolio's performance. We gained **~15%** of our initial capital.
 
-![An Example Strategy](../../../assets/result_stock1.png)
+![An Example Strategy](../../../assets/firstStrategy.png)
 
 - The **blue line** represents the trading signals over time.
 - The **candlestick** data is that of `AAPL`'s open/high/low/close price over the same period.
 - Our portfolio (**black line**) starts at **$1** and fluctuates based on the random signals.
-> Funny enough, we actually outperformed `AAPL`, but let’s be clear—it’s generally not a great idea to trade randomly!
+> Funny enough, we actually outperformed `AAPL`, but let’s be clear—it’s generally not a great idea to trade randomly! Also note that your result will be different (it's a random strategy).
 
 ### Next Steps  
 

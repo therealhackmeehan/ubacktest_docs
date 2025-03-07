@@ -18,9 +18,9 @@ Our strategy will use two simple moving averages:
 
 #### Trading Rules  
 - **Buy (1):** When the short-term SMA crosses **above** the long-term SMA (bullish crossover).  
-- **Sell (-1):** When the short-term SMA crosses **below** the long-term SMA (bearish crossover).  
+- **Short (-1):** When the short-term SMA crosses **below** the long-term SMA (bearish crossover).  
 
-This approach helps us ride upward trends and exit when momentum weakens.  
+This approach helps us ride upward trends and bet against the asset when momentum weakens or reverses.  
 
 ### Strategy Code  
 
@@ -28,7 +28,7 @@ This approach helps us ride upward trends and exit when momentum weakens.
 '''
 Simple Moving Average Crossover Strategy
 
-Generates buy/sell signals based on two SMAs.
+Generates buy/short signals based on two SMAs.
 '''
 
 import pandas as pd
@@ -39,7 +39,7 @@ def strategy(data, short_window=10, long_window=50):
     
     data['signal'] = 0  # Default to hold  
     data.loc[data['SMA_short'] > data['SMA_long'], 'signal'] = 1  # Buy
-    data.loc[data['SMA_short'] < data['SMA_long'], 'signal'] = 0  # Exit Position (Sell)  
+    data.loc[data['SMA_short'] < data['SMA_long'], 'signal'] = -1  # Short  
     
     return data
 ```
@@ -60,7 +60,7 @@ data.loc[data['SMA_short'] > data['SMA_long'], 'signal'] = 1  # Buy
 data.loc[data['SMA_short'] < data['SMA_long'], 'signal'] = -1  # Exit Position (Sell)  
 ```
 
-This ensures that when the short SMA crosses above the long SMA, we go **long** (buy). When it crosses below, we go **short** (sell).  
+This ensures that when the short SMA crosses above the long SMA, we go **long** (buy). When it crosses below, we go **short**.  
 
 ### Running the Strategy in the Editor  
 
@@ -70,15 +70,25 @@ Now that the strategy is ready, let’s backtest it:
 2. **Select a stock** (e.g., AAPL) and a time range.  
 3. **Run the strategy** and analyze the results.  
 
-For this example, let’s test **AAPL from Jan 1, 2022, to Mar 1, 2022**.  
+For this example, let’s test **AAPL from Jan 1, 2022, to Jan 1, 2023**.  
 
 ### Backtest Results  
 
 If you've followed the steps correctly, your backtest should generate a performance chart.  
 
+![SMA result](../../../assets/secondStrategy.png)
+
 - The **blue line** represents the SMA crossover signals.  
 - The **candlestick chart** shows AAPL’s price movements.  
 - The **portfolio equity line** tracks performance based on signals.  
+
+:::note  
+If you examine the moving-averages attached to the strategy we just ran, you'll notice they aren't valid until day 50—when the 50-day moving average has accumulated enough data points:  
+
+![Needs Burn-in](../../../assets/secondStrategy_movingAverages.png)  
+
+To ensure the strategy is valid from day 1, we need a 50-day warm-up period. This is known as a "burn-in" period, an optional setting you can enable. To eliminate this 50-day gap, set the burn-in date to at least 50 business days prior. Learn more about this option [here](../running/advancedbacktestoptions).  
+:::
 
 ### Next Steps  
 
