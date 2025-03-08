@@ -127,5 +127,5 @@ Measures price deviations relative to its mean for spotting outliers.
 ___
 
 :::tip[Don't Feel Constrained]
-These quick Pandas-specific metrics are useful, but feel free to create your own using your logic, NumPy, or other libraries!
+These quick Pandas-specific metrics are useful, but feel free to create your own using custom logic, as well as NumPy or other libraries!
 :::

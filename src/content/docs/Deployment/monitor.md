@@ -5,7 +5,7 @@ description: Keep tabs on your success.
 
 ### Monitoring via Alpaca
 
-To stay updated on your trading algorithms, you can monitor the **Alpaca dashboard**. While the dashboard provides a good overview of your trades, it won't show details about errors or edge cases. For that, you’ll need to refer to the **cloud logs** for more comprehensive information.
+To stay updated on your trading algorithms, you can monitor the **Alpaca dashboard**. While the dashboard provides a good overview of your trades, it won't show details about errors or edge cases. For that, you’ll need to refer to the **Cloud Logs** for more comprehensive information.
 
 You can view your recent trades directly on the main Alpaca dashboard, under **Recent Orders**:
 
@@ -21,7 +21,7 @@ On the homepage of your cloud-deployed script, navigate to the **Logs** tab.
 
 Here, you’ll find a series of logs related to your function’s execution and trading activity.
 
-**uBacktest** logs detailed information, including:
+**uBacktest** attempts to track detailed information, including:
 - Errors and warnings
 - Descriptions of executed trades
 - Updates on equity, portfolio, and cash balances

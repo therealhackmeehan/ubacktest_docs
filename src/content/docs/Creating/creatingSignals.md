@@ -39,7 +39,7 @@ This efficiently assigns values across the entire column in one step. It may tak
 
 #### 2. Looping
 
-While vectorization is preferred for efficiency, you can loop through the DataFrame if necessary. However, looping can be slower and should be used sparingly.
+While vectorization is preferred for efficiency, you can loop through the DataFrame if necessary. Sometimes looping is easiest if you'd like to assign signals based on conditional statements.
 
 **Example**: A signal that assigns `1` if the previous day's close was greater than today's close:
 
@@ -96,7 +96,7 @@ If there are gaps in your signal column, **they will be filled with the previous
 
 ### Other Columns in the DataFrame
 
-We recommend adding all key metrics as columns to your DataFrame. Our software automatically detects these additional columns, allowing you to view them alongside your strategy results for deeper insights.  
+**We recommend adding all key metrics as columns to your DataFrame.** Our software automatically detects these additional columns, allowing you to view them alongside your strategy results for deeper insights.  
 
 > **Example:** If you include moving averages as columns in your DataFrame—such as `data['sma_10']` and `data['sma_50']`—an additional chart will be displayed below the main chart:  
 > ![User Defined Plots](../../../assets/yesBurnin.png)

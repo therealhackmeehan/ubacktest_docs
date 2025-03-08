@@ -56,8 +56,8 @@ Like all trading strategies, this function follows a clear structure:
 The core logic is simple:  
 
 ```python
-data.loc[data['SMA_short'] > data['SMA_long'], 'signal'] = 1  # Buy  
-data.loc[data['SMA_short'] < data['SMA_long'], 'signal'] = -1  # Exit Position (Sell)  
+data.loc[data['SMA_short'] > data['SMA_long'], 'signal'] = 1
+data.loc[data['SMA_short'] < data['SMA_long'], 'signal'] = -1  
 ```
 
 This ensures that when the short SMA crosses above the long SMA, we go **long** (buy). When it crosses below, we go **short**.  
@@ -80,7 +80,7 @@ If you've followed the steps correctly, your backtest should generate a performa
 
 - The **blue line** represents the SMA crossover signals.  
 - The **candlestick chart** shows AAPL’s price movements.  
-- The **portfolio equity line** tracks performance based on signals.  
+- The **black portfolio value line** tracks performance based on signals.  
 
 :::note  
 If you examine the moving-averages attached to the strategy we just ran, you'll notice they aren't valid until day 50—when the 50-day moving average has accumulated enough data points:  
