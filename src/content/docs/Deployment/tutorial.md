@@ -3,91 +3,166 @@ title: Tutorial
 description: A step by step guide to deployment.
 ---
 
-# Deploy Your Trading Strategy in 7 Easy Steps
+# Deploy Your Trading Strategy in 8 Easy Steps
 
-This guide will walk you through taking a backtested strategy and deploying it live with Alpaca and AWS Lambda. Follow these simple steps to get started!
-
-Don't let AWS intimidate you—we'll walk you through deploying your script step by step, without the hassle of navigating its complexities.
+This guide will help you deploy your backtested trading strategy live with Alpaca and Google Cloud. We’ll walk you through each step, making sure everything is simple and clear.
 
 ---
 
-### 1. Generate Code
+### 1. Create an Alpaca Account
 
-1. Go to your strategy's page.
-2. Scroll down to the **Deployment** section.  
-   _![Deployment Dashboard](../../../assets/light_deploy.png)_
-3. Fill in the required fields to match your successful backtest.
-4. Click **Generate Code**—your trading strategy will now appear in the editor!
+We use [Alpaca](https://alpaca.markets/) for commission-free trade execution with a well-maintained Python API.
 
-Take a moment to appreciate that your strategy is ready to transition from simulation to the real market.
+**Steps:**
+1. Sign up for a free account [here](https://app.alpaca.markets/signup).
+2. Log in and go to the **Paper Trading** dashboard.
+3. Allocate funds (e.g., $100,000) for testing.
+
+![Alpaca Dashboard](../../../assets/alpaca_dashboard.png)
+
+4. Generate your **API Key** and **Secret Key**.
+
+![API keys](../../../assets/alpaca_keys.png)
+
+---
+
+### 2. Generate Code for Deployment
+
+Once your strategy is backtested, you can generate the deployment code.
+
+**Steps:**
+1. Go to the strategy page in the backtesting platform.
+2. Scroll to the **Deployment** section.
+
+![Deployment Dashboard](../../../assets/light_deploy.png)
+
+3. Fill in the required fields to match your backtest.
+4. Click **Generate Code**—your strategy code will appear in the editor! You will need this code later.
 
 :::caution  
-Ensure your strategy is fully tested—any unresolved bugs or logic gaps will carry over to the new script.  
+Ensure your strategy is fully tested, as any unresolved bugs or logic gaps will carry over into the deployment script.  
 :::
 
 ---
 
-### 2. Create an Alpaca Account
+### 3. Create a Google Cloud Account
 
-We use [Alpaca](https://alpaca.markets/) to execute trades with no commission fees. They offer a well-maintained Python API for easy trade execution.
+Create a Google Cloud account or log in with your existing Google account.
 
-1. Sign up for a free Alpaca account [here](https://app.alpaca.markets/signup).
-2. Log in and go to the **Paper Trading** dashboard.
-3. You’ll see $100,000 in virtual funds—perfect for testing!
-4. Copy your **API Key** and **Secret Key** to a safe location.
+**Steps:**
+1. Go to [Google Cloud](https://cloud.google.com/) and log in.
+2. Access the **Console**.
 
----
+![Cloud Dashboard](../../../assets/cloud_dashboard.png)
 
-### 3. Add Your API Keys to the Code
+3. Search for **Cloud Run** and select **Cloud Run functions**.
 
-Your generated script needs your Alpaca credentials to place trades.
-
-1. Open the generated script in the editor.
-2. Replace the placeholder API keys with the ones from your Alpaca account.
-
-This step ensures security by keeping your credentials private.
+![Search for Cloud Run](../../../assets/search_cloudrun.png)
 
 ---
 
-### 4. Create an AWS Account
+### 4. Create a Cloud Function
 
-To automate script execution, we’ll use [AWS Lambda](https://aws.amazon.com/lambda/), which offers a **free tier**. 
+In Google Cloud, you’ll create a function to run your trading strategy.
 
-1. Sign up for a free AWS account [here](https://aws.amazon.com/free/).
-2. AWS may ask for a credit card, but this tutorial stays within the free tier.
+**Steps:**
+1. Click on **Write Function**.
 
----
+![Create Function](../../../assets/cloudrun_toolstrip.png)
 
-### 5. Deploy Your Code to AWS Lambda
+2. Name the function (e.g., `test-ubacktest-script`).
+3. Select **Python 3.12** for the runtime.
+4. Set **Authentication** to **Require Authentication** (optional but recommended).
+5. Click **Create** to set up the function.
 
-1. Go to the [AWS Lambda Console](https://console.aws.amazon.com/lambda/home).
-2. Click **Create Function**.
-3. Select **Author from Scratch**.
-4. Name your function and choose **Python 3.xx** as the runtime.
-5. Copy and paste your strategy code into the AWS Lambda editor.
-6. Click **Deploy** to save your function.
+![Create Function Flow](../../../assets/createService.png)
 
 ---
 
-### 6. Schedule Automated Execution
+### 5. Copy-Paste Your Generated Code
 
-We use [Amazon EventBridge](https://aws.amazon.com/eventbridge/) to run your strategy automatically.
+Now, paste the generated code into the Cloud Function editor.
 
-1. Go to the [Amazon EventBridge Console](https://console.aws.amazon.com/events/home).
-2. Click **Create Rule** and set up a **Cron Job** that matches your strategy’s trading frequency.
-3. Use the following examples for scheduling:
-   - **Daily Execution (1d):** `0 0 * * ? *`
-   - **Every 1 Minute:** `rate(1 minute)`
-   - **Every Hour:** `rate(1 hour)`
+**Steps:**
+1. Go to the **Source Code** section.
+
+![Filler Code](../../../assets/editsource_init.png)
+
+2. Paste your generated strategy code.
+
+![My Code](../../../assets/editsource_python.png)
+
+3. In the **requirements.txt** file, add dependencies like:
+   - pandas
+   - alpaca-py
+   - numpy
+   - (other required libraries)
+
+![Reqs.txt](../../../assets/editsource_requirements.png)
+
+4. After adding the code and dependencies, click **Deploy**. It may take a little while, but you should be sent to a home page that looks something like this:
+
+![Successful Deploy](../../../assets/successCloudRun.png)
 
 ---
 
-### 7. Monitor Your Strategy in Action
+### 6. Set Environment Variables
 
-- Check your trades directly in [Alpaca](https://app.alpaca.markets/).
-- View timestamped logs in AWS Lambda’s **Monitor** tab.
+Your strategy may need API keys or other credentials. Let’s set these up securely.
 
-That’s it! Your strategy is now live and running on autopilot.
+**Steps:**
+1. Click **Edit & Deploy New Revision**.
+2. Scroll to **Variables and Secrets**.
+3. Paste your **API_KEY** and **API_SECRET** as environment variables.
 
-🚀 Happy Trading!
+![Environment Variables](../../../assets/envVars.png)
 
+4. Click **Deploy**.
+
+---
+
+### 7. Set a Scheduler with Cloud Scheduler
+
+To run your strategy on a schedule, use Google Cloud Scheduler.
+
+**Steps:**
+1. Search for **Cloud Scheduler** in the console.
+
+![Search Cloud Scheduler](../../../assets/search_cloudscheduler.png)
+
+2. Click **Create Job**.
+
+![Empty Scheduler Console](../../../assets/empty_cloudscheduler.png)
+
+3. Fill in the job details:
+   - **Name**: Choose a name (e.g., `ubacktest-scheduler`).
+   - **Frequency**: Set the frequency (e.g., daily at 9 AM). 
+     - Here’s a quick guide to common cron-style frequency formats:
+       - **`* * * * *`**: Every minute
+       - **`*/5 * * * *`**: Every 5 minutes
+       - **`*/15 * * * *`**: Every 15 minutes
+       - **`*/30 * * * *`**: Every 30 minutes
+       - **`0 * * * *`**: Every hour on the hour
+       - **`0 9 * * *`**: Daily at 9 AM
+       - **`0 0 * * *`**: Daily at midnight
+       - **`0 0 1 * *`**: First day of every month at midnight
+
+      :::caution
+      This frequency must match that of the frequency you specified when generating code!
+      :::
+
+   - **Target**: Choose **HTTP** and enter your function’s URL. Your Cloud Run Function's URL can be found at the top of its home page:
+
+![target](../../../assets/identifyURL.png)
+
+4. Click **Create** to save the schedule.
+
+![Set up cloud scheduler](../../../assets/defineSchedule.png)
+
+---
+
+# That's it! Your Strategy is Live!
+
+By following these 7 steps, your trading strategy will be live on Alpaca and Google Cloud. 
+
+[On the next page](./monitor), we will show you how to and make adjustments as needed to optimize your real-world trading!

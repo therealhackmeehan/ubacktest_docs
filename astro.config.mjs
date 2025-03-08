@@ -49,7 +49,7 @@ export default defineConfig({
 				{
 					label: 'Deployment',
 					badge: 'BETA',
-					items: ['deployment/disclaimer', 'deployment/howitworks', 'deployment/tutorial', 'deployment/monitoringsuccess'],
+					items: ['deployment/disclaimer', 'deployment/howitworks', 'deployment/tutorial', 'deployment/monitor'],
 					collapsed: true,
 				},
 				{
