@@ -18,10 +18,6 @@ Using future data in your strategy, even unintentionally, makes your results unr
 > **Example:**  
 > A moving average that incorporates future prices rather than lagging behind can give your strategy unfair foresight, making it seem far more effective than it actually is.  
 
-:::note
-We perform a basic check for **lookahead bias** when executing your strategy, but we can't guarantee that all instances of this issue will be caught. Our check works by applying your strategy at different time points to detect whether **future data** has improperly influenced past signals—something that should remain fixed.
-:::
-
 ### 2. Survivorship Bias  
 
 If you're only testing on stocks that have done well, your results will be skewed.  

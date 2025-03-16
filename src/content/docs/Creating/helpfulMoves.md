@@ -46,15 +46,15 @@ data['roc_10'] = data['close'].pct_change(periods=10) * 100
 ```  
 Measures the percentage change in price over the last 10 periods to identify momentum shifts.  
 
-### Rolling Maximum (Highest Close Over N Days)  
+### Rolling Maximum (Highest Close Over Previous N Days)  
 ```python
-data['rolling_max_20'] = data['close'].rolling(window=20).max()
+data['rolling_max_20'] = data['close'].shift()rolling(window=20).max()
 ```  
 Finds the highest closing price over the last 20 periods to identify resistance levels.  
 
-### Rolling Minimum (Lowest Close Over N Days)  
+### Rolling Minimum (Lowest Close Over Previous N Days)  
 ```python
-data['rolling_min_20'] = data['close'].rolling(window=20).min()
+data['rolling_min_20'] = data['close'].shift()rolling(window=20).min()
 ```  
 Finds the lowest closing price over the last 20 periods to identify support levels.
 
@@ -96,8 +96,8 @@ Measures trend strength by comparing the sum of gains and losses.
 
 ### Donchian Channels (Breakout Indicator)
 ```python
-data['donchian_high_20'] = data['high'].rolling(window=20).max()
-data['donchian_low_20'] = data['low'].rolling(window=20).min()
+data['donchian_high_20'] = data['high'].shift()rolling(window=20).max()
+data['donchian_low_20'] = data['low'].shift()rolling(window=20).min()
 ```
 Shows the highest and lowest prices over a set period to detect breakouts.  
 

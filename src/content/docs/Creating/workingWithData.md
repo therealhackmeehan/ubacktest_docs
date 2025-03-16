@@ -37,6 +37,12 @@ As pictured above, every stock data DataFrame includes the following columns:
 `open`, `close`, `high`, `low`, `volume`, and `timestamp`. 
 These are available for use in generating trading signals. Avoid naming any additional columns with these names to preserve their intended use.
 
+:::caution  
+All stock data is _normalized_ to start at $1. This won’t affect most trading strategies, but if your strategy depends on absolute dollar movements, adjustments may be needed.  
+
+> For example, a stock that originally moves from $100 to $110 will instead be represented as moving from $1 to $1.10. This scaling ensures consistency across different stocks.  
+:::
+
 On the [next page](./creatingSignals.md), you'll learn how to access data—such as `close` prices—calculate key metrics, and generate trading signals.
 
 ### Adding Constant Trading Signals to the DataFrame

@@ -11,6 +11,10 @@ You can view your recent trades directly on the main Alpaca dashboard, under **R
 
 ![Recent Orders](../../../assets/recentOrders.png)
 
+After you've placed a couple trades, algorithmically or otherwise, you will start to see those trades populate the dashboard:
+
+![Recent Orders Filled](../../../assets/alpacaRecentTrades.png)
+
 ---
 
 ### Monitoring via Google Cloud Logs
@@ -27,5 +31,7 @@ Here, you’ll find a series of logs related to your function’s execution and 
 - Updates on equity, portfolio, and cash balances
 
 Here’s an example of Google Cloud logs:
+
+![Example Cloud Logs](../../../assets/exampleCloudLog.png)
 
 _Notice the log entries related to buy/sell signals, as well as additional info and warnings. These details are helpful for tweaking your strategy based on real-time feedback._

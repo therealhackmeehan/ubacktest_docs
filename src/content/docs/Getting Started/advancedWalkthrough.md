@@ -37,7 +37,7 @@ def strategy(data, short_window=10, long_window=50):
     data['SMA_short'] = data['close'].rolling(window=short_window).mean()
     data['SMA_long'] = data['close'].rolling(window=long_window).mean()
     
-    data['signal'] = 0  # Default to hold  
+    data['signal'] = 0  # Initiate empty signal col
     data.loc[data['SMA_short'] > data['SMA_long'], 'signal'] = 1  # Buy
     data.loc[data['SMA_short'] < data['SMA_long'], 'signal'] = -1  # Short  
     
@@ -94,4 +94,4 @@ To ensure the strategy is valid from day 1, we need a 50-day warm-up period. Thi
 
 - **Experiment with different SMA lengths** (e.g., 20-day vs. 100-day).  
 - **Test on different stocks** to compare performance.   
-- [**Explore more strategy examples!**](/examples/)  
+- [**Explore more strategy examples!**](../examples/moving-averages/smacrossover)  

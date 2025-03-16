@@ -36,3 +36,5 @@ Keep reading this documentation to learn more about creating trading signals.
 ### Using the Strategy
 
 Once defined, your strategy is not tied to a specific stock or date range. It can be applied to any stock, time range, or backtesting setup you choose.
+
+All trades are simulated to execute **at the closing price** to eliminate feedforward bias and ensure that indicators like the high and low of the period remain valid for decision-making. We considered making this configurable, but enforcing execution at close provides a clear and realistic benchmark while preventing lookahead issues in backtesting.

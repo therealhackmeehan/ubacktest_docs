@@ -7,15 +7,9 @@ Click the `advanced options` dropdown to reveal 3 additional customization optio
 
 ![advanced backtest options](../../../assets/light_engineWithAdvanced.png)
 
-### 1. Execute Trade @
+### 1. Execution Time Limit
 
-Select from `high`, `low`, `open`, or `close` to specify the time you want to execute trades, corresponding to the data column used in your backtest.
-
-For instance, choosing `open` means your strategy is backtested against the stock's opening prices, simulating a trade just after 9:30 AM, should you be trading on a daily interval. By default, `close` is used.
-
-:::danger
-Avoid using `high` or `low` for backtesting, as these introduce bias. At the time of the test, you wouldn't know the exact high or low for that period. Also be careful not to accidentally use the `close` price as a factor in deciding the trading signal at `open`.
-:::
+As the name suggests, this parameter sets the maximum execution time before a process is forcibly stopped. It helps prevent infinite loops but will __definitely need to be increased__ for complex machine learning or regression strategies.
 
 ### 2. Cost Per Trade
 

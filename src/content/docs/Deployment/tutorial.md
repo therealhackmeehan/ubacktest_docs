@@ -129,7 +129,27 @@ Your strategy will need to use your Alpaca API Keys. Let’s set these up secure
 
 ---
 
-### 7. Set a Scheduler with Cloud Scheduler
+### 7. Restrict Your Script From the General Public
+
+Currently, _anyone can technically execute_ your endpoint.
+
+If you're trading with paper money, you can skip this section. But it is generally advisable/mandatory to restrict your python script to your own account.
+
+To do this, we will give `cloud run invoker` privilges to ourself.
+
+To do this, we go to **Service Accounts**. You can search the term in the search bar.
+
+This is wh at it looks like. 
+
+Next, we press create service and give a name like `test_invoker`.
+
+Give permission to cloud run scheduler.
+
+We will come back later for this link:
+
+---
+
+### 8. Set a Scheduler with Cloud Scheduler
 
 To run your strategy on a schedule, use Google Cloud Scheduler.
 
@@ -157,8 +177,6 @@ To run your strategy on a schedule, use Google Cloud Scheduler.
    - **`0 * * * *`**: Every hour on the hour
    - **`0 */3 * * *`**: Every 3 hours on the hour
    ___
-   - **`30 9 * * *`**: Daily at 9:30 AM
-   - **`31 9 * * *`**: Daily at 9:31 AM (more realistic to market conditions)
    - **`0 16 * * *`**: Daily at 4:00 PM
    - **`59 15 * * *`**: Daily at 3:59 PM (more realistic to market conditions)
    :::
@@ -169,7 +187,13 @@ To run your strategy on a schedule, use Google Cloud Scheduler.
 
 ![target](../../../assets/identifyURL.png)
 
-4. Click **Continue, then Create** to save the schedule:
+4. Specify Permissions
+
+If you wanted to restrict your API to yourself only, as you probably should, you can fill out the authorization section to make the service "private".
+
+Do ...
+
+5. Click **Continue, then Create** to save the schedule:
 
 ---
 

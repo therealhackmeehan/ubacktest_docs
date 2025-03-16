@@ -94,9 +94,17 @@ If you leave the `signal` column mostly empty, Pandas will automatically fill em
 If there are gaps in your signal column, **they will be filled with the previous value (forward fill)**. This is useful for strategies like buy-and-hold, where you don't technically need to explicitly fill every value with a buy signal, just the first timepoint.
 :::
 
+With this in mind, it’s often useful to initialize the trading signal column with _NaN_. This effectively means, "generate signals only when conditions are met, and take no action in between."  
+
+> #### _NaNs as signals can be thought of as "no action"._ 
+
+In many strategies, such as the simple [RSI Strategy](../examples/rsi/rsi), we start with _NaN_ values to indicate that the position should be held until the next threshold is reached.
+
 ### Other Columns in the DataFrame
 
-**We recommend adding all key metrics as columns to your DataFrame.** Our software automatically detects these additional columns, allowing you to view them alongside your strategy results for deeper insights.  
+**We recommend adding all key metrics as columns to your DataFrame.** Our software automatically detects these additional columns, allowing you to view them alongside your strategy results for deeper insights. You can track up to **6 additional columns**.
+
+Tracking additional indicators this way can be incredibly useful. Many of our examples include built-in support for these metrics, which are displayed below the main result plot.
 
 > **Example:** If you include moving averages as columns in your DataFrame—such as `data['sma_10']` and `data['sma_50']`—an additional chart will be displayed below the main chart:  
 > ![User Defined Plots](../../../assets/yesBurnin.png)
