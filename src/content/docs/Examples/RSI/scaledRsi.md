@@ -4,7 +4,7 @@ title: RSI Indicator Strategy (Scaled)
 
 ### Explanation & Rationale  
 
-### How to Make It You Own
+### How to Make It Your Own
 
 ### Code
 

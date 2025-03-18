@@ -4,7 +4,7 @@ title: RSI with Moving Average Confirmation
 
 ### Explanation & Rationale  
 
-### How to Make It You Own
+### How to Make It Your Own
 
 ### Code
 

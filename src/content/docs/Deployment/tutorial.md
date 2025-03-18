@@ -13,7 +13,6 @@ This guide will help you deploy your backtested trading strategy live with Alpac
 
 We use [Alpaca](https://alpaca.markets/) for commission-free trade execution with a well-maintained Python API.
 
-**Steps:**
 1. Sign up for a free account [here](https://app.alpaca.markets/signup).
 2. Log in and go to the **Paper Trading** dashboard.
 3. Allocate funds (e.g., $100,000) for testing. You can have up to 3 free paper trading accounts.
@@ -30,7 +29,6 @@ We use [Alpaca](https://alpaca.markets/) for commission-free trade execution wit
 
 Once your strategy is backtested, you can generate the deployment code.
 
-**Steps:**
 1. Go to the strategy's page on uBacktest.
 2. Scroll to the **Deployment** section.
 
@@ -49,7 +47,6 @@ Ensure your strategy is fully tested, as any unresolved bugs or gaps in logic wi
 
 Create a Google Cloud account or log in with your existing Google account.
 
-**Steps:**
 1. Go to [Google Cloud](https://cloud.google.com/) and log in.
 2. Access the **Console**:
 
@@ -65,7 +62,6 @@ Create a Google Cloud account or log in with your existing Google account.
 
 In Google Cloud, you’ll create a function to run your trading strategy.
 
-**Steps:**
 1. Click on **WRITE A FUNCTION**.
 
 ![Create Function](../../../assets/cloudrun_toolstrip.png)
@@ -85,7 +81,6 @@ _here's what this may look like:_
 
 After you've created the function, it is time to make it your own!
 
-**Steps:**
 1. Go to the **Source Code** section. For now, you will see some introductory/placeholder code like this:
 
 ![Filler Code](../../../assets/editsource_init.png)
@@ -118,7 +113,6 @@ Your code will not run if you don't include at least **functions-framework**, **
 
 Your strategy will need to use your Alpaca API Keys. Let’s set these up securely.
 
-**Steps:**
 1. Click **Edit & Deploy New Revision**. See the previous image; this button is found at the top of your function's home page.
 2. Scroll down and select **Variables & Secrets**.
 3. Paste your **API_KEY** and **API_SECRET** as environment variables.
@@ -129,23 +123,34 @@ Your strategy will need to use your Alpaca API Keys. Let’s set these up secure
 
 ---
 
-### 7. Restrict Your Script From the General Public
+### 7. Restrict Access to Your Script  
 
-Currently, _anyone can technically execute_ your endpoint.
+By default, _anyone can execute_ your endpoint. 
+If you're using paper trading, you can skip this step. However, it's strongly recommended (and often required) to restrict access to your script.  
+To do this, you'll grant **Cloud Run Invoker** privileges to yourself.  
 
-If you're trading with paper money, you can skip this section. But it is generally advisable/mandatory to restrict your python script to your own account.
+1. Open the Service Accounts Page  
+Search for **"Service Accounts"** in the search bar:  
 
-To do this, we will give `cloud run invoker` privilges to ourself.
+![Search for Service Accounts](../../../assets/serviceAccountsSearch.png)  
 
-To do this, we go to **Service Accounts**. You can search the term in the search bar.
+2. Create a New Service Account  
+Click **"Create Service Account"**:  
 
-This is wh at it looks like. 
+![Create Service Account](../../../assets/createServiceAccount.png)  
 
-Next, we press create service and give a name like `test_invoker`.
+3. Name Your Service Account  
+Give it a name like `cloud-run-invoker`:  
 
-Give permission to cloud run scheduler.
+![Name the Service Account](../../../assets/nameNewServiceAccount.png)  
 
-We will come back later for this link:
+4. Assign the Cloud Run Invoker Role  
+Click **Create and Continue**. Under **"Grant this service account access to project"**, add a new role and search for **Cloud Run Invoker**:  
+
+![Cloud Run Invoker](../../../assets/cloudRunInvoker.png)  
+
+5. Finalize Setup  
+Click through the remaining prompts— no further steps are needed! Your script is now restricted to your account.
 
 ---
 
@@ -166,32 +171,38 @@ To run your strategy on a schedule, use Google Cloud Scheduler.
 
 ![Set up cloud scheduler](../../../assets/defineSchedule.png)
 
-   - **Name**: Choose a name (e.g., `ubacktest-scheduler`).
-   - **Frequency**: Set the frequency. 
+- **Name**: Choose a name (e.g., `ubacktest-scheduler`).
+- **Frequency**: Set the frequency. 
 
-   :::tip[Here’s a quick guide to common cron-style frequency formats:]
-   - **`* * * * *`**: Every minute
-   - **`*/5 * * * *`**: Every 5 minutes
-   - **`*/15 * * * *`**: Every 15 minutes
-   - **`*/30 * * * *`**: Every 30 minutes
-   - **`0 * * * *`**: Every hour on the hour
-   - **`0 */3 * * *`**: Every 3 hours on the hour
-   ___
-   - **`0 16 * * *`**: Daily at 4:00 PM
-   - **`59 15 * * *`**: Daily at 3:59 PM (more realistic to market conditions)
-   :::
+:::tip[Here’s a quick guide to common cron-style frequency formats:]
+- **`* * * * *`**: Every minute
+- **`*/5 * * * *`**: Every 5 minutes
+- **`*/15 * * * *`**: Every 15 minutes
+- **`*/30 * * * *`**: Every 30 minutes
+- **`0 * * * *`**: Every hour on the hour
+- **`0 */3 * * *`**: Every 3 hours on the hour
+___
+- **`0 16 * * *`**: Daily at 4:00 PM
+- **`59 15 * * *`**: Daily at 3:59 PM (more realistic to market conditions)
+:::
 
-   This frequency must match that of the frequency you specified when generating code!
+This frequency must match that of the frequency you specified when generating code!
 
-   - **Target**: Choose **HTTP** and enter your function’s URL. Your Cloud Run Function's URL can be found at the top of its home page:
+- **Target**: Choose **HTTP** and enter your function’s URL. Your Cloud Run Function's URL can be found at the top of its home page:
 
 ![target](../../../assets/identifyURL.png)
 
-4. Specify Permissions
+4. Set API Permissions:
 
-If you wanted to restrict your API to yourself only, as you probably should, you can fill out the authorization section to make the service "private".
+To ensure your API is accessible only to you— which is highly recommended— configure the authorization settings to make the service **private**.  
+- In the **Auth Header** section, click **"Add OIDC Token"**:  
 
-Do ...
+![Add Token](../../../assets/addToken.png)  
+
+- For the first dropdown, select the **Cloud Run Invoker** service account you created earlier.  
+- In the second field, enter your function’s URL, which should match the **HTTP** URL listed above:
+
+![Added Token](../../../assets/addedToken.png)
 
 5. Click **Continue, then Create** to save the schedule:
 
