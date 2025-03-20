@@ -4,7 +4,7 @@ title: Short and Hold Strategy
 
 ### Explanation & Rationale
 
-The **Short and Hold Strategy** is the inverse of the classic buy-and-hold approach, maintaining a constant short position on an asset. This strategy profits from declining prices but carries unlimited risk if the asset appreciates over time. While rarely used in isolation, it can serve as a stress test for bearish market conditions or as part of a hedging strategy.
+The Short and Hold Strategy is the inverse of the classic buy-and-hold approach, maintaining a constant short position on an asset. This strategy profits from declining prices but carries unlimited risk if the asset appreciates over time. While rarely used in isolation, it can serve as a stress test for bearish market conditions or as part of a hedging strategy.
 
 ### How to Make It Your Own
 

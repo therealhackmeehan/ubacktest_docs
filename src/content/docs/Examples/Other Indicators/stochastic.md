@@ -4,10 +4,41 @@ title: Stochastic Oscillator Strategy
 
 ### Explanation & Rationale  
 
+The Stochastic Oscillator Strategy identifies potential momentum reversals by measuring the relative position of a stock’s closing price within its recent high-low range. A buy signal occurs when the %K line crosses above the %D line in the oversold zone (below 20), suggesting a potential upward reversal, while a short signal is triggered when %K crosses below %D in the overbought zone (above 80), indicating a possible downward reversal. This strategy helps traders capitalize on short-term shifts in market momentum by filtering out extreme price conditions.
+
 ### How to Make It Your Own
 
 ### Code
 
 ```python
+'''
+Stochastic Oscillator Strategy.
 
+Buy when the %K line crosses above the %D line below 20 (oversold condition).
+Short when the %K line crosses below the %D line above 80 (overbought condition).
+This strategy helps capture momentum reversals.
+Learn more @ docs.ubacktest.com/examples/other-indicators/stochastic
+'''
+
+import pandas as pd
+import numpy as np
+
+def calculate_stochastic_oscillator(data, window=14):
+
+    low_min = data['low'].rolling(window=window).min()
+    high_max = data['high'].rolling(window=window).max()
+    
+    stoch_k = 100 * (data['close'] - low_min) / (high_max - low_min)
+    stoch_d = stoch_k.rolling(window=3).mean()  # 3-day moving average of %K
+    return stoch_k, stoch_d
+
+def strategy(data):
+    data['%K'], data['%D'] = calculate_stochastic_oscillator(data)
+
+    # Generate signals based on stochastic crossover
+    data['signal'] = np.nan
+    data.loc[(data['%K'] < 20) & (data['%K'] > data['%D']), 'signal'] = 1  # Buy signal
+    data.loc[(data['%K'] > 80) & (data['%K'] < data['%D']), 'signal'] = -1  # Short signal
+
+    return data
 ```

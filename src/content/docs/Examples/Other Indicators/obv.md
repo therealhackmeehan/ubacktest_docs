@@ -4,10 +4,46 @@ title: On-Balance Volume Strategy
 
 ### Explanation & Rationale  
 
+The On-Balance Volume (OBV) Strategy uses volume flow to anticipate price movements, treating volume as a leading indicator of momentum. A buy signal occurs when OBV crosses above its 20-day SMA, suggesting that increasing volume supports a bullish trend, while a short signal is triggered when OBV falls below its SMA, indicating weakening momentum. This approach helps traders confirm trends by analyzing whether volume is accumulating in the direction of price movement, improving trade reliability.
+
 ### How to Make It Your Own
 
 ### Code
 
 ```python
+'''
+On-Balance Volume (OBV) Strategy.
 
+Buy when the OBV crosses above the 20-day SMA (bullish confirmation).
+Short when the OBV crosses below the 20-day SMA (bearish confirmation).
+OBV helps to capture momentum with volume as a leading indicator.
+Learn more @ docs.ubacktest.com/examples/other-indicators/obv
+'''
+
+import pandas as pd
+
+def calculate_obv(data):
+    obv = [0]
+    for i in range(1, len(data)):
+        if data['close'].iloc[i] > data['close'].iloc[i-1]:
+            obv.append(obv[-1] + data['volume'].iloc[i])
+        elif data['close'].iloc[i] < data['close'].iloc[i-1]:
+            obv.append(obv[-1] - data['volume'].iloc[i])
+        else:
+            obv.append(obv[-1])
+    return pd.Series(obv, index=data.index)
+
+def calculate_sma(series, window=20):
+    return series.rolling(window=window).mean()
+
+def strategy(data):
+    data['OBV'] = calculate_obv(data)
+    data['SMA_20'] = calculate_sma(data['OBV'])
+
+    # Generate signals based on OBV crossover
+    data['signal'] = 0
+    data.loc[data['OBV'] > data['SMA_20'], 'signal'] = 1  # Buy signal
+    data.loc[data['OBV'] < data['SMA_20'], 'signal'] = -1  # Short signal
+
+    return data
 ```
