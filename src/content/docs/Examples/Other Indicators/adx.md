@@ -6,8 +6,6 @@ title: ADX Indicator Strategy
 
 The ADX Trend Strength strategy combines the Average Directional Index (ADX) with Directional Indicators (+DI and -DI) to confirm strong trends before entering a trade. A buy signal is generated when +DI crosses above -DI, indicating upward momentum, while ADX above 25 confirms trend strength; similarly, a short signal occurs when -DI crosses above +DI with ADX above 25, signaling a strong downtrend. This approach helps filter out weak trends and avoid false signals, ensuring trades align with significant market movements.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

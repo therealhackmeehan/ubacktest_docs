@@ -6,8 +6,6 @@ title: RSI Breakout Strategy
 
 The Buy Low, Sell/Short High upon RSI exit strategy takes a more conservative approach by waiting for confirmation before entering a trade. A buy signal is generated when the RSI crosses above 30, confirming the stock has moved out of the oversold zone, while a sell or short signal occurs when the RSI crosses below 70, indicating the stock has exited the overbought zone. This strategy aims to reduce the risk of false signals by waiting for the RSI to exit extreme levels before acting, making it a more cautious method than the classic RSI strategy.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

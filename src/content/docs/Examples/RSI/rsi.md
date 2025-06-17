@@ -6,8 +6,6 @@ title: RSI Indicator Strategy
 
 The Buy Low, Sell/Short High strategy uses the Relative Strength Index (RSI) to identify overbought and oversold conditions in the market. A buy signal is generated when the RSI drops below 30, indicating the stock is oversold and potentially due for a reversal, while a short signal occurs when the RSI exceeds 70, signaling the stock is overbought and may be due for a pullback. This strategy aims to capture price reversals by trading at extreme price levels, assuming that the market will correct itself after moving too far in one direction.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

@@ -6,8 +6,6 @@ title: Random Forest Classifier
 
 The Random Forest Classifier strategy leverages an ensemble of decision trees to analyze past market data and predict future price movements. By incorporating technical indicators as features, the model captures complex patterns and relationships while reducing the risk of overfitting through averaging multiple decision trees. This approach enhances robustness and adaptability, making it well-suited for noisy financial markets where single-model predictions may be less reliable.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

@@ -6,8 +6,6 @@ title: Bollinger Bands with Moving Average Confirmation
 
 This strategy refines traditional Bollinger Bands trading by incorporating the 50-day SMA to align trades with the broader trend. Buy signals are only generated when the price rebounds from the lower Bollinger Band while staying above the SMA, ensuring trades occur in an overall uptrend, while sell signals require a price drop from the upper band while remaining below the SMA, reinforcing a downtrend. This filter helps avoid counter-trend trades, improving the probability of success by ensuring trades follow the prevailing market direction.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

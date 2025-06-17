@@ -6,8 +6,6 @@ title: Lasso Regression
 
 The Lasso Regression Strategy applies L1 regularization to train a regression model on the past 14 days of price data, predicting the next day's movement. By penalizing less significant features, Lasso helps prevent overfitting and ensures the model focuses on the most relevant price trends. This approach is useful for filtering noise in financial data while still capturing meaningful directional changes for trading decisions.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

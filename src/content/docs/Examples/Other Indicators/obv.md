@@ -6,8 +6,6 @@ title: On-Balance Volume Strategy
 
 The On-Balance Volume (OBV) Strategy uses volume flow to anticipate price movements, treating volume as a leading indicator of momentum. A buy signal occurs when OBV crosses above its 20-day SMA, suggesting that increasing volume supports a bullish trend, while a short signal is triggered when OBV falls below its SMA, indicating weakening momentum. This approach helps traders confirm trends by analyzing whether volume is accumulating in the direction of price movement, improving trade reliability.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

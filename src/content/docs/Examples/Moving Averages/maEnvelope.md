@@ -6,8 +6,6 @@ title: Moving Average Envelope Strategy
 
 The Moving Average Envelope strategy uses a percentage-based envelope around a simple moving average (SMA) to define overbought and oversold conditions. A buy signal occurs when the price touches the lower envelope band and reverses upward, while a sell signal is triggered when the price touches the upper band and reverses downward. This approach helps identify potential entry and exit points based on price deviations from a central moving average, providing a dynamic method for trading within defined boundaries.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

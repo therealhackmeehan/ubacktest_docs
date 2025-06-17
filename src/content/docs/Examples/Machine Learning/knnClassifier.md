@@ -6,8 +6,6 @@ title: KNN Classifier
 
 The K-Nearest Neighbors (KNN) strategy applies a machine learning model to predict stock movements based on historical data and technical indicators. By comparing the latest market conditions to similar past instances, the model classifies the next day's expected price movement based on the most common outcome among its nearest historical neighbors. This approach is useful for pattern recognition in financial data, allowing the strategy to adapt dynamically to evolving market conditions.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

@@ -6,8 +6,6 @@ title: Support Vector Machines
 
 The Support Vector Machine (SVM) Classifier strategy applies a machine learning model to classify future price movements based on historical data and technical indicators. By finding an optimal decision boundary, the SVM separates positive and negative price movement patterns, making it useful for identifying market trends. This approach is particularly effective in high-dimensional spaces and helps filter out noise, improving the reliability of trade signals.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

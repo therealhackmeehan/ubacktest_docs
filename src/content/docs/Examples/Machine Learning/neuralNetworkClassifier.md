@@ -6,8 +6,6 @@ title: Neural Network Classifier
 
 The Neural Network (MLP) Classifier strategy utilizes a multi-layer perceptron to analyze historical stock data and predict future price movements. By leveraging technical indicators as input features, the model identifies complex, non-linear patterns that may be missed by simpler statistical methods. This approach allows for more adaptive decision-making, potentially improving the accuracy of buy and sell signals in dynamic market conditions.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

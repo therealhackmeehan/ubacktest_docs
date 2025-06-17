@@ -6,8 +6,6 @@ title: Stochastic Oscillator Strategy
 
 The Stochastic Oscillator Strategy identifies potential momentum reversals by measuring the relative position of a stock’s closing price within its recent high-low range. A buy signal occurs when the %K line crosses above the %D line in the oversold zone (below 20), suggesting a potential upward reversal, while a short signal is triggered when %K crosses below %D in the overbought zone (above 80), indicating a possible downward reversal. This strategy helps traders capitalize on short-term shifts in market momentum by filtering out extreme price conditions.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

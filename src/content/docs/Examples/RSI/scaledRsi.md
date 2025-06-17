@@ -6,8 +6,6 @@ title: RSI Indicator Strategy (Scaled)
 
 The Scaled Buy Low, Sell High strategy takes a proportional approach to trading based on the RSI's deviation from its neutral value of 50. The strategy scales buy and sell signals: the further the RSI is from 50, the larger the position size, with more buying occurring when the RSI is very low (indicating oversold conditions) and more selling when the RSI is very high (indicating overbought conditions). This approach aims to capture more significant price movements by adjusting position size according to the strength of the trend.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

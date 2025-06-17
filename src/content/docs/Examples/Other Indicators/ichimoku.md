@@ -6,8 +6,6 @@ title: Ichimoku Cloud Strategy
 
 The Ichimoku Cloud Strategy provides a comprehensive view of trend direction, momentum, and support/resistance levels by combining multiple moving average-based components. A buy signal occurs when the Conversion Line crosses above the Base Line while the price remains above the cloud, indicating strong bullish momentum, while a short signal is triggered when the Conversion Line crosses below the Base Line with the price below the cloud, confirming a downtrend. This strategy helps traders filter out noise and trade in the direction of established trends with higher probability.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

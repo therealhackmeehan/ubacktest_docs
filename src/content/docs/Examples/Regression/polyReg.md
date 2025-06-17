@@ -6,8 +6,6 @@ title: Polynomial Regression
 
 The Polynomial Regression Strategy uses a polynomial regression model to capture non-linear trends in the past 14 days of price data, making it more adaptable to market fluctuations than simple linear regression. By transforming the time index into polynomial features, the model can better capture complex price movements, allowing for more accurate predictions of the next day's price. Buy and sell signals are generated based on whether the predicted price indicates an uptrend or downtrend, helping to capture potential momentum shifts in the market.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

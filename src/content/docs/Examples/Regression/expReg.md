@@ -6,8 +6,6 @@ title: Exponential Regression
 
 The Exponential Regression Strategy fits a regression model to the past 14 days of log-transformed prices, capturing exponential trends in market movements. By predicting the next day’s price and comparing it to the most recent closing price, the strategy generates buy signals for expected uptrends and sell signals for anticipated downtrends. This approach helps identify non-linear price trends more effectively than linear models, making it useful for markets that exhibit compounding growth or decay.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

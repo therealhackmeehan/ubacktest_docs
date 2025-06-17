@@ -6,8 +6,6 @@ title: RSI with Volume Confirmation
 
 The Buy Low, Sell/Short High with Volume Confirmation strategy enhances the RSI-based signals by requiring volume confirmation to ensure that there is strong momentum behind the price movement. A buy signal is generated when the RSI crosses below 30 and volume exceeds its 50-day average, indicating an oversold condition with increased market participation. Similarly, a short signal occurs when the RSI crosses above 70 and volume is above its 50-day average, confirming strong selling pressure, which helps to capture more reliable momentum-driven moves.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

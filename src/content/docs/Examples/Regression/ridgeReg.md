@@ -6,8 +6,6 @@ title: Ridge Regression
 
 The Ridge Regression Strategy uses L2 regularization to fit a regression model to the past 14 days of price data, helping to prevent overfitting while capturing the relationship between time and price movements. By applying regularization, Ridge Regression reduces the impact of less significant features, leading to more robust predictions. The strategy generates buy and sell signals based on whether the predicted price suggests an uptrend or downtrend, helping traders capture market momentum while avoiding noise.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

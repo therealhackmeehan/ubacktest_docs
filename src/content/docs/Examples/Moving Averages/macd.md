@@ -6,8 +6,6 @@ title: MACD Strategy
 
 The MACD Crossover strategy uses the Moving Average Convergence Divergence (MACD) indicator to identify changes in market momentum. A buy signal is generated when the MACD crosses above the signal line, indicating increasing upward momentum, while a sell signal occurs when the MACD crosses below the signal line, signaling potential downward movement. This strategy focuses on the convergence and divergence of two EMAs, helping traders capture trends and reversals in a market.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

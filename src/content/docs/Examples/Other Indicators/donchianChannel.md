@@ -6,8 +6,6 @@ title: Donchian Channel Strategy
 
 The Donchian Channel Breakout Strategy identifies strong price breakouts by tracking the highest high and lowest low over the past 20 days. A buy signal occurs when the price exceeds the 20-day high, signaling upward momentum, while a short signal is triggered when the price falls below the 20-day low, indicating downward momentum. This approach is widely used in trend-following systems, as it helps traders capture sustained price movements while avoiding choppy market conditions.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

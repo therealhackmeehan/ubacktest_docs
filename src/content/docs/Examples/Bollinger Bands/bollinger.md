@@ -6,8 +6,6 @@ title: Bollinger Bands Strategy
 
 The Bollinger Bands Strategy capitalizes on the tendency of stock prices to revert to their mean after reaching extreme levels. It generates buy signals when the price moves back above the lower Bollinger Band, suggesting a potential upward reversal, and short signals when the price falls below the upper band, indicating a possible downward move. This approach assumes that price fluctuations are often temporary and that prices tend to oscillate within the bands rather than trending indefinitely.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

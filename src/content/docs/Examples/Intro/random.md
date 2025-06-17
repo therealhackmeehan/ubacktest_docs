@@ -6,8 +6,6 @@ title: Random Strategy
 
 The Random Strategy assigns a buy, hold, or short signal to each date with equal probability, creating a completely unpredictable trading pattern. This approach provides a baseline for assessing whether structured strategies add value beyond pure chance. While it lacks any market logic, it can help test the robustness of backtesting frameworks and highlight the importance of systematic decision-making in trading.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

@@ -6,8 +6,6 @@ title: RSI with Moving Average Confirmation
 
 The Buy Low, Sell/Short High with Trend Confirmation strategy combines RSI with the 50-day Simple Moving Average (SMA) to reduce false signals in volatile markets. A buy signal is generated when the RSI crosses below 30 and the stock is above its 50-day SMA, indicating an oversold condition in an uptrend. Conversely, a short signal occurs when the RSI crosses above 70 and the stock is below its 50-day SMA, suggesting an overbought condition in a downtrend, helping to filter out less reliable signals.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

@@ -6,8 +6,6 @@ title: Exponential Moving Average Crossover
 
 The Exponential Moving Average (EMA) Crossover strategy identifies short-term trend shifts by comparing a faster-moving 12-day EMA with a slower 26-day EMA. When the 12-day EMA crosses above the 26-day EMA, it signals upward momentum and a potential buying opportunity, whereas a downward crossover suggests weakening momentum and a selling signal. Since EMAs give more weight to recent prices, this strategy reacts quickly to market changes, making it effective for capturing short-term trends.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

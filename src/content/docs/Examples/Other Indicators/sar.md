@@ -6,8 +6,6 @@ title: Parabolic SAR Strategy
 
 The Parabolic SAR Strategy identifies trend direction and provides clear entry and exit points by tracking the Parabolic Stop and Reverse (SAR) indicator. A buy signal is generated when the SAR moves below the price, indicating an uptrend, while a sell signal occurs when the SAR moves above the price, signaling a downtrend. This strategy is particularly useful for capturing strong trends and dynamically adjusting stop-loss levels to protect profits as the trend develops.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

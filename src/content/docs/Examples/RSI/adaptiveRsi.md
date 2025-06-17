@@ -6,8 +6,6 @@ title: RSI Indicator Strategy with Adaptive Bounds
 
 The Buy Low, Sell/Short High with Adaptive RSI Levels strategy adjusts entry and exit points based on market volatility by dynamically setting the Relative Strength Index (RSI) thresholds. A buy signal is triggered when the RSI drops below the lower threshold (mean RSI - standard deviation), indicating an oversold condition, while a sell or short signal occurs when the RSI exceeds the upper threshold (mean RSI + standard deviation), signaling an overbought condition. This approach adapts to changing market conditions by recalculating thresholds based on recent volatility, offering a more flexible method for capturing potential reversals.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

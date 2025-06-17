@@ -6,8 +6,6 @@ title: Adaptive Moving Average
 
 The Adaptive Moving Average (AMA) strategy dynamically adjusts to market conditions by incorporating an efficiency ratio that measures trend strength relative to volatility. Unlike traditional moving averages, the AMA responds more quickly during strong trends and smooths out noise during sideways markets, making it more adaptive to price changes. This approach helps traders capture meaningful trends while avoiding false signals in choppy or low-volatility environments.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

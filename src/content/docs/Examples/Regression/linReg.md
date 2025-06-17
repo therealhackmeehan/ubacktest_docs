@@ -6,8 +6,6 @@ title: Linear Regression
 
 The Simple Linear Regression Strategy fits a linear model to the past 14 days of closing prices to forecast the next day's movement. By identifying the overall trend, it generates buy signals when the predicted price is higher than the previous close and sell signals when it is lower. This method provides a straightforward approach to trend forecasting, though it assumes a consistent linear relationship, which may not always hold in volatile markets.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

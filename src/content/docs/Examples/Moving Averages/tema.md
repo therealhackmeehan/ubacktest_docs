@@ -6,8 +6,6 @@ title: Triple Exponential Moving Average
 
 The TEMA Crossover strategy uses the Triple Exponential Moving Average (TEMA) to smooth price data and generate more accurate buy and sell signals with reduced lag compared to traditional moving averages. A buy signal occurs when the price crosses above the TEMA, indicating upward momentum, while a sell signal is generated when the price crosses below the TEMA, suggesting a potential downtrend. By applying three levels of exponential smoothing, the TEMA strategy helps filter out market noise and provides clearer trend-following signals.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

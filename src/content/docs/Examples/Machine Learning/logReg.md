@@ -6,8 +6,6 @@ title: Logistic Regression
 
 The Logistic Regression strategy applies a statistical model to predict whether the stock price will go up or down based on the past 30 days of data. By learning from historical trends, the model assigns probabilities to future price movements and generates buy or sell signals accordingly. This approach is useful for capturing simple linear relationships in market behavior and provides a transparent, interpretable framework for making trading decisions.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

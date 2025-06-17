@@ -6,8 +6,6 @@ title: Gradient Boosting Classifier
 
 This strategy utilizes a Gradient Boosting Classifier to analyze the past 30 days of stock data and predict the next day’s market direction. By incorporating technical indicators such as moving averages, RSI, MACD, and Bollinger Bands as features, the model aims to identify patterns that drive price movements. The approach leverages machine learning to adapt to complex market conditions, potentially improving prediction accuracy over traditional rule-based strategies.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python

@@ -6,8 +6,6 @@ title: Average True Range (ATR) Strategy
 
 The ATR Breakout Strategy uses the Average True Range (ATR) to identify significant price breakouts, adapting to market volatility. A buy signal is generated when the price exceeds the previous high plus a multiple of ATR, while a short signal occurs when the price drops below the previous low minus the ATR multiple, ensuring trades only occur during strong moves. This approach helps traders capture momentum-driven breakouts while dynamically adjusting stop-loss levels based on market conditions.
 
-### How to Make It Your Own
-
 ### Code
 
 ```python
