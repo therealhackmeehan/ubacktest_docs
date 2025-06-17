@@ -45,6 +45,6 @@ This allocation remains unchanged until the signal shifts away from .5, triggeri
 
 Most of our examples focus on **all-in trading signals** of **-1 or 1**, but we're expanding on this!  
 
-Check out [this example](/examples/scaledrsi/) for inspiration on **scaling your allocation** based on confidence.  
+Check out [this example](/examples/rsi/scaledrsi/) for inspiration on **scaling your allocation** based on confidence.  
 
 This feature can be **incredibly useful**—whether you're making a full buy-in or a more cautious allocation. We encourage you to experiment with the existing examples and introduce **middle-ground cases** where your signals are less decisive than a full commitment.

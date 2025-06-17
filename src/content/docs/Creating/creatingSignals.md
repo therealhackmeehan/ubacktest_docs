@@ -35,7 +35,7 @@ data['signal'] = 0  # Initialize with default value
 data['signal'] = (data['close'] > 100).astype(int)
 ```
 
-This efficiently assigns values across the entire column in one step. It may take a little getting used to, but its quite poetic.
+This efficiently assigns values across the entire column in one step. It may take a little getting used to, but its quite wonderful.
 
 #### 2. Looping
 
@@ -66,7 +66,7 @@ data['signal'] = data['close'].apply(
 
 This method is flexible for more complex logic but should be used with caution for performance reasons.
 
-See the [examples](/examples/) for specific use cases involving these methods!
+See the [examples](/examples) for specific use cases involving these methods!
 
 ### Handling Missing Signals
 

@@ -15,11 +15,11 @@ Don't forget to **name** and **save** your result for future use. It will appear
 
 #### 1. Analyze
 
-If you have multiple results (at least two) from the same strategy, select the Group by Parent Strategy option. This lets you compare overall statistics across the strategy and visually see which date ranges have been tested. Aim for a well-balanced spread of date ranges when testing your strategy!
+If you have multiple results (at least two) from the same strategy, select the __Group by Parent Strategy__ option. This lets you compare overall statistics across the strategy and visually see which date ranges have been tested. Aim for a well-balanced spread of date ranges when testing your strategy!
 
 #### 2. Share
 
-You can share your strategy with other users if they have an account with us! Once shared, your strategy will appear in their 'Shared with Me' section on the results page. They’ll need to accept the strategy before being able to view it.
+You can share your strategy with other users if they have an account with us! Once shared, your strategy will appear in their __Shared with Me__ section on the results page. They’ll need to accept the strategy before being able to view it.
 
 #### 3. Lock/Unlock
 

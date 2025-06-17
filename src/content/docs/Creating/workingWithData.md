@@ -43,7 +43,7 @@ All stock data is _normalized_ to start at $1. This won’t affect most trading 
 > For example, a stock that originally moves from $100 to $110 will instead be represented as moving from $1 to $1.10. This scaling ensures consistency across different stocks.  
 :::
 
-On the [next page](./creatingSignals.md), you'll learn how to access data—such as `close` prices—calculate key metrics, and generate trading signals.
+On the [next page](./creatingsignals), you'll learn how to access data—such as `close` prices—calculate key metrics, and generate trading signals.
 
 ### Adding Constant Trading Signals to the DataFrame
 

@@ -64,7 +64,7 @@ For this example, we'll use **AAPL** stock from **Jan 1, 2022, to Mar 1, 2022**.
 
 ### Backtest Results  
 
-If you've followed along, you'll see a chart displaying your portfolio's performance. We gained **~15%** of our initial capital.
+If you've followed along, you'll see a chart displaying your portfolio's performance. It won't look the same as ours; it is a random strategy. We gained **~15%** of our initial capital.
 
 ![An Example Strategy](../../../assets/firstStrategy.png)
 
@@ -78,9 +78,10 @@ If you've followed along, you'll see a chart displaying your portfolio's perform
 - **Save your result** to compare later.  
 - **Try different stocks & time periods** to see variations in performance.  
 - **Modify the strategy** to introduce more structure—maybe adding trend-following or mean-reversion rules!  
-- [**Try one of our many examples!**](/examples/)
+- [**Try one of our many examples!**](/examples/intro/random)
 
+<!-- 
 ### Can I Actually Make Money?  
 
-If you're serious about deploying a profitable strategy, check out our [**Deployment Section**](../deployment/tutorial) to learn how to launch strategies in live markets.  
+If you're serious about deploying a profitable strategy, check out our [**Deployment Section**](../deployment/tutorial) to learn how to launch strategies in live markets.   -->
 

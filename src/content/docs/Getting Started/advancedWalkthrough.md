@@ -3,7 +3,7 @@ title: Your Second Strategy
 description: Implementing a simple moving average crossover strategy.  
 ---
 
-We figure it is good to provide an example with a little more legitimacy than the random [introductory strategy](./simplewalkthrough). So, here you go.
+We figure it is good to provide an example with a little more legitimacy than the random [introductory strategy](./simplewalkthrough). So, here you go:
 
 ### Introduction  
 

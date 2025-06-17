@@ -14,7 +14,7 @@ Neural Network (MLP) Classifier.
 
 Trains a NN Classifier using the past 30 days of data to predict the next day's action. 
 The model leverages basic technical indicators as features to make predictions.
-Learn more @ docs.ubacktest.com/examples/machine-learning/nnclassifier
+Learn more @ docs.ubacktest.com/examples/machine-learning/neuralnetworkclassifier
 '''
 
 import pandas as pd

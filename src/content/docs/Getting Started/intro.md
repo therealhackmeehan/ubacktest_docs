@@ -7,7 +7,7 @@ Welcome! We’ll get you started with building your first trading strategy, and 
 
 ### What is a Trading Strategy?
 
-At its core, creating a trading strategy means **deciding when to buy, sell, or do nothing**. We do this by assigning **trading signals** to a table of stock data.
+At its core, creating a trading strategy means **deciding when to buy stock, sell stock, or do nothing**. We do this by assigning **trading signals** to a table of stock data.
 
 ### Trading Signal Basics:
 - **1** → Buy
