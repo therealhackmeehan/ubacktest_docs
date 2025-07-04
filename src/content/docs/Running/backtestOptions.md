@@ -29,7 +29,9 @@ Choose when you'd like to stop the backtest, exit all positions, and view the re
 
 Set how often you want to execute trades, within market hours.
 
-### Random Selection
+---
+
+### Random Button
 
 If you want a random S&P 500 stock and a random start/end date ranging from 1 month to 2 years apart, click this button.
 
@@ -49,6 +51,3 @@ Press the reset button to return to the default backtest settings:
 ### Have Fun.
 
 Run your strategies and watch the results/metrics pour in!
-
-![sample stock result](../../../assets/result_stock1.png)
-![sample sp comparison](../../../assets/light_SP.png)

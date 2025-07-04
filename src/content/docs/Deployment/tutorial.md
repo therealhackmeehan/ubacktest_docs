@@ -15,7 +15,7 @@ We use [Alpaca](https://alpaca.markets/) for commission-free trade execution wit
 
 1. Sign up for a free account [here](https://app.alpaca.markets/signup).
 2. Log in and go to the **Paper Trading** dashboard.
-3. Allocate funds (e.g., $100,000) for testing. You can have up to 3 free paper trading accounts.
+3. Allocate simulated funds (e.g., $100,000) for testing. You can have up to 3 free paper trading accounts.
 
 ![Alpaca Dashboard](../../../assets/alpaca_dashboard.png)
 
@@ -29,12 +29,12 @@ We use [Alpaca](https://alpaca.markets/) for commission-free trade execution wit
 
 Once your strategy is backtested, you can generate the deployment code.
 
-1. Go to the strategy's page on uBacktest.
+1. Go to the strategy's page on [uBacktest.com](https://uBacktest.com).
 2. Scroll to the **Deployment** section.
 
 ![Deployment Dashboard](../../../assets/light_deploy.png)
 
-3. Fill in the required fields to match your backtest. Make a mental note of your trading frequency, as we will schedule the script to run at this interval later..
+3. Fill in the required fields to match your backtest. Make a mental note of your trading frequency, as we will schedule the script to run at this interval later.
 4. Click **Generate Code**—your strategy code will appear in the editor! You will also need this code later.
 
 :::caution  
@@ -103,7 +103,7 @@ Your code will not run if you don't include at least **functions-framework**, **
 
 ![Reqs.txt](../../../assets/editsource_requirements.png)
 
-4. After adding the code and dependencies, click **SAVE AND REDEPLOY**. It may take a little while, but your strategy should have a little green check!
+4. After adding the code and dependencies, click **SAVE AND REDEPLOY**. It may take a little while, but your strategy should have a little green check, indicating success!
 
 ![Successful Deploy](../../../assets/successCloudRun.png)
 
@@ -210,6 +210,6 @@ To ensure your API is accessible only to you— which is highly recommended— c
 
 # That's it! Your Strategy is Live!
 
-By following these 7 steps, your trading strategy will be live on Alpaca and Google Cloud. 
+By following these 8 steps, your trading strategy will be live on Alpaca and Google Cloud. 
 
-[On the next page](./monitor), we will show you how to and make adjustments as needed to optimize your real-world trading!
+[On the next page](/deployment/monitor), we will show you how to and make adjustments as needed to optimize your real-world trading!

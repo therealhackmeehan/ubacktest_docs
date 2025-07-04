@@ -19,7 +19,7 @@ If you have multiple results (at least two) from the same strategy, select the _
 
 #### 2. Share
 
-You can share your strategy with other users if they have an account with us! Once shared, your strategy will appear in their __Shared with Me__ section on the results page. They’ll need to accept the strategy before being able to view it.
+You can share your strategy with other users if they have an account with us! Once shared, the recipient will receive an email notifying them, and your strategy will appear in their __Shared with Me__ section on the results page. They’ll need to accept the strategy before being able to view it.
 
 #### 3. Lock/Unlock
 
@@ -34,5 +34,5 @@ Rename your strategy. If you’ve shared it, the new name will reflect for all u
 You can delete your result at any time.
 
 :::caution
-If you’ve shared the strategy, deleting it will also remove it from the accounts of anyone you’ve shared it with.
+If you’ve shared the strategy result, deleting it will also remove it from the accounts of anyone you’ve shared it with.
 :::

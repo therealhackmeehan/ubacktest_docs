@@ -3,11 +3,11 @@ title: Your Second Strategy
 description: Implementing a simple moving average crossover strategy.  
 ---
 
-We figure it is good to provide an example with a little more legitimacy than the random [introductory strategy](./simplewalkthrough). So, here you go:
+We figure it is good to provide an example with a little more intensity than the [introductory strategy](./simplewalkthrough). So, here you go:
 
 ### Introduction  
 
-This second guide walks you through a basic yet powerful trading strategy: the **Simple Moving Average (SMA) Crossover**. By following along, you’ll get familiar with the backtesting framework while building a strategy that traders actually use in real markets.  
+This second guide walks you through a basic yet powerful trading strategy: the **Simple Moving Average (SMA) Crossover**. By following along, you’ll get familiar with the backtesting framework while building a strategy that traders actually use in real markets.
 
 ### The Example Strategy  
 
@@ -33,9 +33,9 @@ Generates buy/short signals based on two SMAs.
 
 import pandas as pd
 
-def strategy(data, short_window=10, long_window=50):
-    data['SMA_short'] = data['close'].rolling(window=short_window).mean()
-    data['SMA_long'] = data['close'].rolling(window=long_window).mean()
+def strategy(data):
+    data['SMA_short'] = data['close'].rolling(10).mean()
+    data['SMA_long'] = data['close'].rolling(50).mean()
     
     data['signal'] = 0  # Initiate empty signal col
     data.loc[data['SMA_short'] > data['SMA_long'], 'signal'] = 1  # Buy
@@ -94,4 +94,4 @@ To ensure the strategy is valid from day 1, we need a 50-day warm-up period. Thi
 
 - **Experiment with different SMA lengths** (e.g., 20-day vs. 100-day).  
 - **Test on different stocks** to compare performance.   
-- [**Explore more strategy examples!**](../examples/moving-averages/smacrossover)  
+- [**Explore more strategy examples!**](../examples)  

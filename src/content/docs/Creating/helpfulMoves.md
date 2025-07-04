@@ -3,7 +3,7 @@ title: Helpful Methods & Indicators
 description: A collection of handy metrics and signals that are good to know and use.
 ---
 
-Here's a collection of essential Pandas functions, tips, tricks, and indicators commonly used in trading metric and signal calculations. Even when not indicators themselves, many of these form the foundation for financial indicators that power buy/sell decisions. 
+Here's a collection of essential Pandas functions, tips, tricks, and indicators commonly used in trading metric and signal calculations. Even when not indicators themselves, many of these form the foundation for financial indicators that power smart buy/sell decisions. 
 
 >You'll notice a bunch of the following indicators/metrics make use of the `rolling()` function. Read more about it [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html). The `ewm()` method is also integral to many trading indicators. You can read more about it [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.ewm.html).
 
@@ -124,8 +124,9 @@ data['z_score'] = (data['close'] - data['rolling_mean']) / (data['rolling_std'] 
 ```
 Measures price deviations relative to its mean for spotting outliers.
 
-___
-
 :::tip[Don't Feel Constrained]
 These quick Pandas-specific metrics are useful, but feel free to create your own using custom logic, as well as NumPy or other libraries!
 :::
+
+
+#### Want more? Check out our robust collection of [examples](../examples). ####

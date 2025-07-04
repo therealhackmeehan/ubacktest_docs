@@ -20,7 +20,7 @@ def strategy(data):
 As long as this structure is in place, you can add any logic or helper functions needed to generate trading signals.
 
 :::caution
-You must define a function named `strategy`, or your strategy will be invalid and won't run. Always start with this basic structure!
+You must define a function named `strategy`, or your strategy will be invalid and won't run. Always start with this basic skeleton structure!
 :::
 
 ### Where to Place the Trading Signals?

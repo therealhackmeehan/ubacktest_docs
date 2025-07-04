@@ -71,14 +71,14 @@ If you've followed along, you'll see a chart displaying your portfolio's perform
 - The **blue line** represents the trading signals over time.
 - The **candlestick** data is that of `AAPL`'s open/high/low/close price over the same period.
 - Our portfolio (**black line**) starts at **$1** and fluctuates based on the random signals.
-> Funny enough, we actually outperformed `AAPL`, but let’s be clear—it’s generally not a great idea to trade randomly! Also note that your result will be different (it's a random strategy).
+> Funny enough, we actually outperformed `AAPL`, but let’s be clear—it’s generally not a great idea to trade randomly!
 
 ### Next Steps  
 
 - **Save your result** to compare later.  
 - **Try different stocks & time periods** to see variations in performance.  
 - **Modify the strategy** to introduce more structure—maybe adding trend-following or mean-reversion rules!  
-- [**Try one of our many examples!**](/examples/intro/random)
+- [**Try one of our many examples!**](/examples)
 
 <!-- 
 ### Can I Actually Make Money?  

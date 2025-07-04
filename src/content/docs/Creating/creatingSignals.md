@@ -7,15 +7,15 @@ description: How to programatically create trading signals.
 
 By now, you should be a little bit familiar with Pandas DataFrames and how to create a column of constant or empty signals.
 
-To create a simple column of buy signals, you can use:
+To create a simple column of constant buy signals, you can use:
 
 ```python
 data['signal'] = 1
 ```
 
-### More Advanced Signals
+### Assigning Signals Based on Patterns
 
-We often need to create more complex signals, instead of just constants like `-1` or `1`. There are several ways to designate trading signals:
+Trading strategies frequently require assigning signals dynamically based on patterns. Below are some common approaches:
 
 #### 1. Vectorized Assignment
 
@@ -98,7 +98,7 @@ With this in mind, it’s often useful to initialize the trading signal column w
 
 > #### _NaNs as signals can be thought of as "no action"._ 
 
-In many strategies, such as the simple [RSI Strategy](../examples/rsi/rsi), we start with _NaN_ values to indicate that the position should be held until the next threshold is reached.
+In many strategies, such as the simple [RSI Strategy](../examples/rsi/rsi), we start with _NaN_ values to indicate that the generated position should be held until the next threshold is reached.
 
 ### Other Columns in the DataFrame
 
