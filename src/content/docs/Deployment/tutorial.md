@@ -105,7 +105,7 @@ Your code will not run if you don't include at least **functions-framework**, **
 
 4. After adding the code and dependencies, click **SAVE AND REDEPLOY**. It may take a little while, but your strategy should have a little green check, indicating success!
 
-![Successful Deploy](../../../assets/successCloudRun.png)
+![Successful Deploy](../../../assets/successCloudRunScript.png)
 
 ---
 
