@@ -48,13 +48,13 @@ Measures the percentage change in price over the last 10 periods to identify mom
 
 ### Rolling Maximum (Highest Close Over Previous N Days)  
 ```python
-data['rolling_max_20'] = data['close'].shift()rolling(window=20).max()
+data['rolling_max_20'] = data['close'].shift().rolling(window=20).max()
 ```  
 Finds the highest closing price over the last 20 periods to identify resistance levels.  
 
 ### Rolling Minimum (Lowest Close Over Previous N Days)  
 ```python
-data['rolling_min_20'] = data['close'].shift()rolling(window=20).min()
+data['rolling_min_20'] = data['close'].shift().rolling(window=20).min()
 ```  
 Finds the lowest closing price over the last 20 periods to identify support levels.
 

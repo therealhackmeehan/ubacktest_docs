@@ -13,7 +13,7 @@ Don't forget to **name** and **save** your result for future use. It will appear
 
 ### What Can I Do with a Saved Result?
 
-#### 1. Analyze
+#### 1. View & Analyze
 
 If you have multiple results (at least two) from the same strategy, select the __Group by Parent Strategy__ option. This lets you compare overall statistics across the strategy and visually see which date ranges have been tested. Aim for a well-balanced spread of date ranges when testing your strategy!
 
