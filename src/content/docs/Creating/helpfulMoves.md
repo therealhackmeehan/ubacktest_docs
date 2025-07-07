@@ -129,4 +129,4 @@ These quick Pandas-specific metrics are useful, but feel free to create your own
 :::
 
 
-#### Want more? Check out our robust collection of [examples](../examples). ####
+#### Want more? Check out our robust collection of [examples](/examples/). ####

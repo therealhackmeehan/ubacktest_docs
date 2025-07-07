@@ -212,4 +212,4 @@ To ensure your API is accessible only to you— which is highly recommended— c
 
 By following these 8 steps, your trading strategy will be live on Alpaca and Google Cloud. 
 
-[On the next page](/deployment/monitor), we will show you how to and make adjustments as needed to optimize your real-world trading!
+[On the next page](/deployment/monitor/), we will show you how to and make adjustments as needed to optimize your real-world trading!

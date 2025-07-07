@@ -3,7 +3,7 @@ title: Your Second Strategy
 description: Implementing a simple moving average crossover strategy.  
 ---
 
-We figure it is good to provide an example with a little more intensity than the [introductory strategy](./simplewalkthrough). So, here you go:
+We figure it is good to provide an example with a little more intensity than the [introductory strategy](/getting-started/simplewalkthrough/). So, here you go:
 
 ### Introduction  
 
@@ -87,11 +87,11 @@ If you examine the moving-averages attached to the strategy we just ran, you'll 
 
 ![Needs Burn-in](../../../assets/secondStrategy_movingAverages.png)  
 
-To ensure the strategy is valid from day 1, we need a 50-day warm-up period. This is known as a "burn-in" period, an optional setting you can enable. To eliminate this 50-day gap, set the burn-in date to at least 50 business days prior. Learn more about this option [here](../running/advancedbacktestoptions).  
+To ensure the strategy is valid from day 1, we need a 50-day warm-up period. This is known as a "burn-in" period, an optional setting you can enable. To eliminate this 50-day gap, set the burn-in date to at least 50 business days prior. Learn more about this option [here](/running/advancedbacktestoptions/).  
 :::
 
 ### Next Steps  
 
 - **Experiment with different SMA lengths** (e.g., 20-day vs. 100-day).  
 - **Test on different stocks** to compare performance.   
-- [**Explore more strategy examples!**](../examples)  
+- [**Explore more strategy examples!**](/examples/)  

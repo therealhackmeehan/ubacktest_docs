@@ -66,7 +66,7 @@ data['signal'] = data['close'].apply(
 
 This method is flexible for more complex logic but should be used with caution for performance reasons.
 
-See the [examples](/examples) for specific use cases involving these methods!
+See the [examples](/examples/) for specific use cases involving these methods!
 
 ### Handling Missing Signals
 

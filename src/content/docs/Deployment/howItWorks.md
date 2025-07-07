@@ -15,7 +15,7 @@ We recommend [**Alpaca**](https://alpaca.markets) for trade execution. Alpaca is
 
 ### Automated Execution
 
-Your strategy will execute at a **specified trading frequency**, whether that’s hourly, daily, or another interval of your choosing. Follow our [step-by-step tutorial](/deployment/tutorial) to deploy your Python script, which will run autonomously in the cloud—no manual intervention required.  
+Your strategy will execute at a **specified trading frequency**, whether that’s hourly, daily, or another interval of your choosing. Follow our [step-by-step tutorial](/deployment/tutorial/) to deploy your Python script, which will run autonomously in the cloud—no manual intervention required.  
 
 # How does this work?
 

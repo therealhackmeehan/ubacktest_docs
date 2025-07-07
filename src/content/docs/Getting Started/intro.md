@@ -15,7 +15,7 @@ At its core, creating a trading strategy means **deciding when to buy stock, sel
 - **0** → No Investment
 
 :::tip
-You can assign signals to fractional values (like `.5`) as well! We'll learn more about that [later](../../creating/partialtrades).
+You can assign signals to fractional values (like `.5`) as well! We'll learn more about that [later](/creating/partialtrades/).
 ::: 
 
 These signals will guide the backtesting engine to simulate what would’ve happened if you'd followed those decisions with historical stock data.

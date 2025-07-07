@@ -78,10 +78,5 @@ If you've followed along, you'll see a chart displaying your portfolio's perform
 - **Save your result** to compare later.  
 - **Try different stocks & time periods** to see variations in performance.  
 - **Modify the strategy** to introduce more structure—maybe adding trend-following or mean-reversion rules!  
-- [**Try one of our many examples!**](/examples)
-
-<!-- 
-### Can I Actually Make Money?  
-
-If you're serious about deploying a profitable strategy, check out our [**Deployment Section**](../deployment/tutorial) to learn how to launch strategies in live markets.   -->
+- [**Try one of our many examples!**](/examples/)
 
