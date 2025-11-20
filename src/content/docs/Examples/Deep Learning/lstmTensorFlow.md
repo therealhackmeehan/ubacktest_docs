@@ -24,7 +24,6 @@ import numpy as np
 import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 
-
 # ---- Prepare Dataset ----
 def create_sequences(data, seq_length):
     x, y = [], []
@@ -54,12 +53,20 @@ def strategy(data):
     model.fit(x, y, epochs=10, batch_size=64, verbose=0)
 
     # ---- Predict and compute signals ----
-    signals = [None] * len(data)
+    signals = [np.nan] * len(data)
 
     for i in range(seq_length, len(data) - 1):
-        seq_input = scaled[i - seq_length:i].reshape(1, seq_length, 4)
-        predicted_scaled = model.predict(seq_input, verbose=0)[0][0]
-        predicted_close = scaler.inverse_transform([[0, 0, 0, predicted_scaled]])[0][3]
+        # Prepare input window
+        window = scaled[i - seq_length:i].reshape(1, seq_length, 4)
+        window_tensor = tf.convert_to_tensor(window, dtype=tf.float32)
+
+        # Predict next-day scaled close
+        pred_scaled = float(model(window_tensor, training=False).numpy().squeeze())
+
+        # Inverse-transform just the close value
+        predicted_close = scaler.inverse_transform([[0, 0, 0, pred_scaled]])[0, 3]
+
+        # Compare with today's close to generate signal
         today_close = data.iloc[i]['close']
         signals[i + 1] = 1 if predicted_close > today_close else -1
 

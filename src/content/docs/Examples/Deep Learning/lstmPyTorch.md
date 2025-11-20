@@ -2,7 +2,7 @@
 title: LSTM (PyTorch)
 ---
 
-### Explanation & Rationale  
+### Explanation & Rationale
 
 The LSTM Strategy leverages the power of deep learning to identify subtle patterns in historical price data that may signal future movements. By analyzing sequences of past stock prices—including open, high, low, and close—it predicts the next day’s closing price and issues a signal based on the expected direction. A buy signal is generated when the model forecasts an upward move, and a short signal when a decline is anticipated. This approach assumes that recent price behavior contains valuable information about short-term trends, enabling data-driven predictions beyond traditional technical indicators.
 
@@ -25,7 +25,6 @@ import torch
 from torch import nn
 from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import Dataset, DataLoader
-
 
 # ---- LSTM Model ----
 class LSTMModel(nn.Module):
@@ -100,7 +99,7 @@ def strategy(data):
             seq_input = scaled[i - seq_length:i]
             seq_tensor = torch.tensor(seq_input, dtype=torch.float32).unsqueeze(0)  # shape (1, seq_len, input_size)
             predicted_scaled = model(seq_tensor).item()
-            
+
             # Inverse transform to get actual price
             predicted_close = scaler.inverse_transform([[0, 0, 0, predicted_scaled]])[0][3]
             today_close = data.iloc[i]['close']
