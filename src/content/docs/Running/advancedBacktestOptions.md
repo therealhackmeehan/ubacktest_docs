@@ -9,7 +9,7 @@ Click the `advanced options` dropdown to reveal 3 additional customization optio
 
 ### 1. Execution Time Limit
 
-As the name suggests, this parameter sets the maximum execution time before a process is forcibly stopped. It helps prevent infinite loops but will __definitely need to be increased__ for complex machine learning or regression strategies.
+As the name suggests, this parameter sets the maximum execution time before a process is forcibly stopped. It helps prevent infinite loops but will **definitely need to be increased** for complex machine learning or regression strategies.
 
 ### 2. Cost Per Trade
 
